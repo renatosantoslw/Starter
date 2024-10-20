@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F63B583-B178-492B-A29D-CC395EE4537C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDV.UTIL.FORMS</RootNamespace>
+    <AssemblyName>PDV.UTIL.FORMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DueLicence">
+      <HintPath>..\PDV.LIB\license\DueLicence.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.Pro.5.15.3\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\PDV.LIB\metro\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Syncfusion.Chart.Base, Version=17.4460.0.39, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Chart.Windows, Version=17.4460.0.39, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Gauge.Windows, Version=17.4460.0.39, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Base, Version=17.4460.0.39, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="SysAdm">
+      <HintPath>..\PDV.LIB\sysadmin\SysAdm.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContextoUtil.cs" />
+    <Compile Include="ControllerLicense.cs" />
+    <Compile Include="CriptografiaSystem.cs" />
+    <Compile Include="Forms\Atualizador\Atualizador_Web.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Atualizador\Atualizador_Web.Designer.cs">
+      <DependentUpon>Atualizador_Web.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Caixa\ManutencaoCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Caixa\ManutencaoCaixa.Designer.cs">
+      <DependentUpon>ManutencaoCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConversorCriptografia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConversorCriptografia.Designer.cs">
+      <DependentUpon>ConversorCriptografia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginAdmin.Designer.cs">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SenhaMestraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SenhaMestraForm.Designer.cs">
+      <DependentUpon>SenhaMestraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlterarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlterarSenha.Designer.cs">
+      <DependentUpon>AlterarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Atualizador\FAT_AtualizarVersao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Atualizador\FAT_AtualizarVersao.Designer.cs">
+      <DependentUpon>FAT_AtualizarVersao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Caixa\AberturaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Caixa\AberturaCaixa.Designer.cs">
+      <DependentUpon>AberturaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Caixa\frmContadorMoedas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Caixa\frmContadorMoedas.designer.cs">
+      <DependentUpon>frmContadorMoedas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfiguracaoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfiguracaoSistema.Designer.cs">
+      <DependentUpon>ConfiguracaoSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Cliente.Designer.cs">
+      <DependentUpon>SEL_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBloqueio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBloqueio.designer.cs">
+      <DependentUpon>frmBloqueio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Atualizador\Atualizador_Web.resx">
+      <DependentUpon>Atualizador_Web.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Caixa\ManutencaoCaixa.resx">
+      <DependentUpon>ManutencaoCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConversorCriptografia.resx">
+      <DependentUpon>ConversorCriptografia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginAdmin.resx">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SenhaMestraForm.resx">
+      <DependentUpon>SenhaMestraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlterarSenha.resx">
+      <DependentUpon>AlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Atualizador\FAT_AtualizarVersao.resx">
+      <DependentUpon>FAT_AtualizarVersao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Caixa\AberturaCaixa.resx">
+      <DependentUpon>AberturaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Caixa\frmContadorMoedas.resx">
+      <DependentUpon>frmContadorMoedas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfiguracaoSistema.resx">
+      <DependentUpon>ConfiguracaoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seletores\SEL_Cliente.resx">
+      <DependentUpon>SEL_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBloqueio.resx">
+      <DependentUpon>frmBloqueio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PDV.CONTROLER\PDV.CONTROLER.csproj">
+      <Project>{245d7222-45b5-4de2-bae5-17f4f031b2a2}</Project>
+      <Name>PDV.CONTROLER</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.DAO\PDV.DAO.csproj">
+      <Project>{397d862c-3539-4d10-ab60-4376af4f010a}</Project>
+      <Name>PDV.DAO</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.INTEGRADOR.ERP\IntegradorZeusPDV\PDV.INTEGRADOR.ERP.csproj">
+      <Project>{FB411058-ED61-4AD3-A684-7C64879898A9}</Project>
+      <Name>PDV.INTEGRADOR.ERP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.UTIL\ConrollerLicença\ConrollerLicença.csproj">
+      <Project>{18337ADA-68DD-4A2B-9653-21A5219D5DDA}</Project>
+      <Name>ConrollerLicença</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.UTIL\PDV.UTIL.csproj">
+      <Project>{d0aa02cb-a9d4-47b0-9e06-f96760d03d96}</Project>
+      <Name>PDV.UTIL</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\icon-entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoeb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FORTEPLUS_2018.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-entrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FORTEPLUS_20181.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TESD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Página De Login Do App Background Design.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconeOne Manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem para icone cubo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ONE DESENVOLVIMENTO-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DUE PDV 1000X1000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khaddmus logo trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DuaPDV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DueERP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferir.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White-abstract-background-with-wave-vector-illustration-01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Due ERP editavel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login 18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeado11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acessar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeado2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeado3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeado31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acessar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modelo azul e azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modelo azul e azul1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engrenages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela-Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engrenages1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Azul Escuro e Ciano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engrenagens2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engrenagens21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela-Login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.33.25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sair51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config_login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo148_481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Support.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Support1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagemBloqueio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloqueio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloqueio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo bloqueio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo bloqueio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo bloqueio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bloqueio11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela-Login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tela-Login21.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

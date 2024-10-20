@@ -1,0 +1,1296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{065DCA43-1BEA-40CB-8EC4-55F3426682DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDV.VIEW.FRENTECAIXA</RootNamespace>
+    <AssemblyName>DUE PDV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ACBr.Net.Core, Version=1.2.3.3, Culture=neutral, PublicKeyToken=d3bb9130f8b775a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ACBr.Net.Core.1.2.3.3\lib\net452\ACBr.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ACBr.Net.DFe.Core, Version=1.2.4.1, Culture=neutral, PublicKeyToken=d3bb9130f8b775a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ACBr.Net.DFe.Core.1.2.4.1\lib\net452\ACBr.Net.DFe.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ACBr.Net.Integrador, Version=1.2.0.0, Culture=neutral, PublicKeyToken=d3bb9130f8b775a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ACBr.Net.Integrador.1.2.0\lib\net452\ACBr.Net.Integrador.dll</HintPath>
+    </Reference>
+    <Reference Include="ACBr.Net.Sat, Version=1.2.6.1, Culture=neutral, PublicKeyToken=d3bb9130f8b775a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ACBr.Net.Sat.1.2.6.1\lib\net452\ACBr.Net.Sat.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeStandard, Version=2.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.2.3\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Cappta.Gp.Api.Com">
+      <HintPath>..\PDV.LIB\cappta\Cappta.Gp.Api.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CSharpPrint">
+      <HintPath>..\PDV.LIB\mfeprint\CSharpPrint.dll</HintPath>
+    </Reference>
+    <Reference Include="CTe.Classes, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.CTe.1.0.0.1110\lib\net40\CTe.Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="CTe.Servicos, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.CTe.1.0.0.1110\lib\net40\CTe.Servicos.dll</HintPath>
+    </Reference>
+    <Reference Include="CTe.Utils, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.CTe.1.0.0.1110\lib\net40\CTe.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="CTe.Wsdl, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.CTe.1.0.0.1110\lib\net40\CTe.Wsdl.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v19.1.Drawing, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DFe.Classes, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.MDFe.1.0.0.1110\lib\net40\DFe.Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="DFe.Utils, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.MDFe.1.0.0.1110\lib\net40\DFe.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="DFe.Wsdl, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.NFe.NFCe.1.0.1.1110\lib\net40\DFe.Wsdl.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2017.2.1.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\PDV.LIB\zeus\AppNfe\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2017.2.1.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\PDV.LIB\zeus\AppNfe\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2017.2.1.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\PDV.LIB\zeus\AppNfe\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.Pro.5.15.3\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gma.QrCodeNet.0.4.1.2\lib\net40\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphicsPrinter">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\GraphicsPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="MDFe.Classes, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.MDFe.1.0.0.1110\lib\net40\MDFe.Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="MDFe.Servicos, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.MDFe.1.0.0.1110\lib\net40\MDFe.Servicos.dll</HintPath>
+    </Reference>
+    <Reference Include="MDFe.Utils, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.MDFe.1.0.0.1110\lib\net40\MDFe.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MDFe.Wsdl, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.MDFe.1.0.0.1110\lib\net40\MDFe.Wsdl.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\metro\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Classes, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.NFe.NFCe.1.0.1.1110\lib\net40\NFe.Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Danfe.Base">
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\PDV.LIB\zeus\AppNfe\NFe.Danfe.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFe.Danfe.Fast">
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\PDV.LIB\zeus\AppNfe\NFe.Danfe.Fast.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFe.Danfe.Nativo">
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\PDV.LIB\zeus\AppNfe\NFe.Danfe.Nativo.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Servicos, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.NFe.NFCe.1.0.1.1110\lib\net40\NFe.Servicos.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Utils, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.NFe.NFCe.1.0.1.1110\lib\net40\NFe.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Wsdl, Version=1.0.0.772, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeus.Net.NFe.NFCe.1.0.1.1110\lib\net40\NFe.Wsdl.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Wsdl.XmlSerializers, Version=1.0.0.767, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Wsdl.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="SysAdm">
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\Lic\SysAdm.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.6.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Context\Contexto.cs" />
+    <Compile Include="App_Context\PDVControlador.cs" />
+    <Compile Include="Forms\MataFome\MataFomeConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MataFome\MataFomeConnect.Designer.cs">
+      <DependentUpon>MataFomeConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MataFome\MonitoramentoPedidosMataFome.cs" />
+    <Compile Include="Forms\PDV\Classes\ImpressaoFiscal.cs" />
+    <Compile Include="Forms\PDV\Comanda\GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\Comanda\GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.Designer.cs">
+      <DependentUpon>GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_ContatoClienteFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_ContatoClienteFornecedor.Designer.cs">
+      <DependentUpon>FCA_ContatoClienteFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_HistoricoClienteFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_HistoricoClienteFornecedor.Designer.cs">
+      <DependentUpon>FCA_HistoricoClienteFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_PagamentoMFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_PagamentoMFe.Designer.cs">
+      <DependentUpon>FCA_PagamentoMFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FREL_Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FREL_Preview.Designer.cs">
+      <DependentUpon>FREL_Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConferenciaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConferenciaCaixa.Designer.cs">
+      <DependentUpon>GPDV_ConferenciaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CarregarVendaMFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CarregarVendaMFe.Designer.cs">
+      <DependentUpon>GPDV_CarregarVendaMFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CarregarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CarregarVenda.Designer.cs">
+      <DependentUpon>GPDV_CarregarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_AjusteEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_AjusteEstoque.Designer.cs">
+      <DependentUpon>GPDV_AjusteEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConsultarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConsultarProduto.Designer.cs">
+      <DependentUpon>GPDV_ConsultarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_Comandos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_Comandos.Designer.cs">
+      <DependentUpon>GPDV_Comandos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_IdentificarClienteDAV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_IdentificarClienteDAV.Designer.cs">
+      <DependentUpon>GPDV_IdentificarClienteDAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ProgressoMFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ProgressoMFe.Designer.cs">
+      <DependentUpon>GPDV_ProgressoMFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_SuprimentoCaixa .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_SuprimentoCaixa .Designer.cs">
+      <DependentUpon>GPDV_SuprimentoCaixa .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_TipoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_TipoVenda.Designer.cs">
+      <DependentUpon>GPDV_TipoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_NFCeGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_NFCeGeral.Designer.cs">
+      <DependentUpon>GPDV_NFCeGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CancelarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CancelarItem.Designer.cs">
+      <DependentUpon>GPDV_CancelarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConsultarPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConsultarPreco.Designer.cs">
+      <DependentUpon>GPDV_ConsultarPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_DescontoItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_DescontoItem.Designer.cs">
+      <DependentUpon>GPDV_DescontoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_FinalizarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_FinalizarVenda.Designer.cs">
+      <DependentUpon>GPDV_FinalizarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_IdentificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_IdentificarCliente.Designer.cs">
+      <DependentUpon>GPDV_IdentificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_InformarDescontoItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_InformarDescontoItem.Designer.cs">
+      <DependentUpon>GPDV_InformarDescontoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_PainelInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_PainelInicial.Designer.cs">
+      <DependentUpon>GPDV_PainelInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_PesquisarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_PesquisarItem.Designer.cs">
+      <DependentUpon>GPDV_PesquisarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_SangriaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_SangriaCaixa.Designer.cs">
+      <DependentUpon>GPDV_SangriaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\Menu\GPDV_EncerramentoCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\Menu\GPDV_EncerramentoCaixa.Designer.cs">
+      <DependentUpon>GPDV_EncerramentoCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\Menu\GPDV_MenuConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\Menu\GPDV_MenuConfiguracoes.Designer.cs">
+      <DependentUpon>GPDV_MenuConfiguracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\Vendas.Designer.cs">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Comanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Comanda.Designer.cs">
+      <DependentUpon>SEL_Comanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTermoDeAcordo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTermoDeAcordo.designer.cs">
+      <DependentUpon>frmTermoDeAcordo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagens.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensagens.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MFe\ACBrConfig.cs" />
+    <Compile Include="MFe\CacheRepository.cs" />
+    <Compile Include="MFe\CupomCFe_Cancelamento.cs">
+      <DependentUpon>CupomCFe_Cancelamento.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MFe\CupomCFe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CupomCFe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MFe\DsCFe.cs">
+      <DependentUpon>DsCFe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MFe\DsCFe.designer.cs">
+      <DependentUpon>DsCFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MFe\DsCFe1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsCFe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MFe\Emissao\EmitirMFe.cs" />
+    <Compile Include="MFe\Emissao\RetornoMFe.cs" />
+    <Compile Include="MFe\Emissao\RetornoPagamento.cs" />
+    <Compile Include="MFe\ImpostoProdutoMFe.cs" />
+    <Compile Include="MFe\ImpressaoCFe.cs" />
+    <Compile Include="MFe\ReportController.cs" />
+    <Compile Include="MFe\ReportDataSource.cs" />
+    <Compile Include="MFe\reportViwCrystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MFe\reportViwCrystal.Designer.cs">
+      <DependentUpon>reportViwCrystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Task\EmitirNFceTask.cs" />
+    <Compile Include="TEF\CompranteTEF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TEF\CompranteTEF.Designer.cs">
+      <DependentUpon>CompranteTEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\CreateClienteCappta.cs" />
+    <Compile Include="TEF\FormularioSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\FormularioSample.designer.cs">
+      <DependentUpon>FormularioSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\InputBoxRecarga .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\InputBoxFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\Notificable.cs" />
+    <Compile Include="TEF\Poup\TEF_Poup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\Poup\TEF_Poup.Designer.cs">
+      <DependentUpon>TEF_Poup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\TEFPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\TEFPagamento.designer.cs">
+      <DependentUpon>TEFPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\Model\TipoInformacaoPinpad.cs" />
+    <Compile Include="TEF\Model\TipoParcelamento.cs" />
+    <Compile Include="TEF\TaskManagerForm.cs" />
+    <Compile Include="Upgrade.cs" />
+    <None Include="Resources\ValorTotalFinalizarVenda.png" />
+    <None Include="Resources\unitario.png" />
+    <None Include="Resources\produto.png" />
+    <None Include="Resources\logo139px.png" />
+    <None Include="Resources\logoprograma.png" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\Tela2.png" />
+    <None Include="Resources\txtTotal.png" />
+    <None Include="Resources\mesa livreNew2.png" />
+    <None Include="Resources\mesa ocupdaNew2.png" />
+    <None Include="Resources\mesa livreNew1.png" />
+    <None Include="Resources\mesa ocupdaNew1.png" />
+    <None Include="Resources\unlock.png" />
+    <None Include="Resources\Sair5.png" />
+    <None Include="Resources\settings.33.25.png" />
+    <None Include="Resources\settings2.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\Voltar.png" />
+    <None Include="Resources\pos 121x119.png" />
+    <None Include="Resources\Pos.png" />
+    <None Include="Resources\Tela1.png" />
+    <None Include="Resources\Modelo azul e azul3.png" />
+    <None Include="Resources\Modelo azul e azul2.png" />
+    <None Include="Resources\Modelo azul e azul1.png" />
+    <None Include="Resources\Modelo azul e azul 21.png" />
+    <None Include="Resources\Modelo azul e azul 2.png" />
+    <None Include="Resources\Modelo azul e azul.png" />
+    <None Include="Resources\Modelo Branco.png" />
+    <None Include="Resources\pdv21.png" />
+    <None Include="Resources\Retaguarda21.png" />
+    <EmbeddedResource Include="Forms\MataFome\MataFomeConnect.resx">
+      <DependentUpon>MataFomeConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\Comanda\GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.resx">
+      <DependentUpon>GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FCA_ContatoClienteFornecedor.resx">
+      <DependentUpon>FCA_ContatoClienteFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FCA_HistoricoClienteFornecedor.resx">
+      <DependentUpon>FCA_HistoricoClienteFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FCA_PagamentoMFe.resx">
+      <DependentUpon>FCA_PagamentoMFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FREL_Preview.resx">
+      <DependentUpon>FREL_Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_ConferenciaCaixa.resx">
+      <DependentUpon>GPDV_ConferenciaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_CarregarVendaMFe.resx">
+      <DependentUpon>GPDV_CarregarVendaMFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_CarregarVenda.resx">
+      <DependentUpon>GPDV_CarregarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_AjusteEstoque.resx">
+      <DependentUpon>GPDV_AjusteEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_ConsultarProduto.resx">
+      <DependentUpon>GPDV_ConsultarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_Comandos.resx">
+      <DependentUpon>GPDV_Comandos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_IdentificarClienteDAV.resx">
+      <DependentUpon>GPDV_IdentificarClienteDAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_PainelInicial.resx">
+      <DependentUpon>GPDV_PainelInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_ProgressoMFe.resx">
+      <DependentUpon>GPDV_ProgressoMFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_SuprimentoCaixa .resx">
+      <DependentUpon>GPDV_SuprimentoCaixa .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_TipoVenda.resx">
+      <DependentUpon>GPDV_TipoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_NFCeGeral.resx">
+      <DependentUpon>GPDV_NFCeGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_CancelarItem.resx">
+      <DependentUpon>GPDV_CancelarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_ConsultarPreco.resx">
+      <DependentUpon>GPDV_ConsultarPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_DescontoItem.resx">
+      <DependentUpon>GPDV_DescontoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_FinalizarVenda.resx">
+      <DependentUpon>GPDV_FinalizarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_IdentificarCliente.resx">
+      <DependentUpon>GPDV_IdentificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_InformarDescontoItem.resx">
+      <DependentUpon>GPDV_InformarDescontoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_PesquisarItem.resx">
+      <DependentUpon>GPDV_PesquisarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_SangriaCaixa.resx">
+      <DependentUpon>GPDV_SangriaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\Menu\GPDV_EncerramentoCaixa.resx">
+      <DependentUpon>GPDV_EncerramentoCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\Menu\GPDV_MenuConfiguracoes.resx">
+      <DependentUpon>GPDV_MenuConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\Vendas.resx">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seletores\SEL_Comanda.resx">
+      <DependentUpon>SEL_Comanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTermoDeAcordo.resx">
+      <DependentUpon>frmTermoDeAcordo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensagens.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensagens.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Forms\PDV\Leia-me.txt" />
+    <Content Include="Forms\PDV\MFE_AtivaçãoPlus\ACBr.Net.Sat.Demo.exe" />
+    <Content Include="Forms\PDV\MFE_AtivaçãoPlus\ConfRede.xml" />
+    <Content Include="Forms\PDV\MFE_AtivaçãoPlus\mfe.dll" />
+    <Content Include="Forms\PDV\MFE_AtivaçãoPlus\MFE_AtivaçãoPlus.exe" />
+    <Content Include="Forms\PDV\MFE_AtivaçãoPlus\Parametros.xml" />
+    <Content Include="Icone.ico" />
+    <Content Include="MFe\CupomCFe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CupomCFe.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MFe\CupomCFe_Cancelamento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CupomCFe_Cancelamento.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="MFe\reportViwCrystal.resx">
+      <DependentUpon>reportViwCrystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\CompranteTEF.resx">
+      <DependentUpon>CompranteTEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\FormularioSample.resx">
+      <DependentUpon>FormularioSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\InputBoxRecarga .resx">
+      <DependentUpon>InputBoxRecarga .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\InputBoxFormaPagamento.resx">
+      <DependentUpon>InputBoxFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\Poup\TEF_Poup.resx">
+      <DependentUpon>TEF_Poup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\TEFPagamento.resx">
+      <DependentUpon>TEFPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App_Data\Schemas\atuCadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cabecMsg_v1.02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\CCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\confRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\distDFeInt_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\downloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110110_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110111_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110140_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210200_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210210_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210220_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210240_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envCancelPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envFiscoNfe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\enviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\EPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\eventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\eventoEPEC_v0.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\inutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\LeiauteCadastroEmissorDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsultaCadastro_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsultaCadastro_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteDownloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteSRE_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\nfe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procCCeNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procConfRecebtoNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoNFe_v99.99.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\resEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\resNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retAtuCadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retconsNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDistDFeInt_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDownloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvCancelPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvFiscoNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEventoEPEC_v0.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposDistDFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Start.ini" />
+    <None Include="Forms\PDV\MFE_AtivaçãoPlus\MFE_AtivaçãoPlus.ini" />
+    <None Include="MFe\DsCFe.xsc">
+      <DependentUpon>DsCFe.xsd</DependentUpon>
+    </None>
+    <None Include="MFe\DsCFe.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsCFe1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MFe\DsCFe.xss">
+      <DependentUpon>DsCFe.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegracaoMFE\IntegracaoMFE.csproj">
+      <Project>{d56c21f1-2cb5-44ca-a03a-35b3e3943de1}</Project>
+      <Name>IntegracaoMFE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelAndroidApp\ModelAndroidApp.csproj">
+      <Project>{792FD9AC-9348-4E9B-9FC2-3F15E020E611}</Project>
+      <Name>ModelAndroidApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLER\PDV.CONTROLER.csproj">
+      <Project>{245d7222-45b5-4de2-bae5-17f4f031b2a2}</Project>
+      <Name>PDV.CONTROLER</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.EVENTONFE\PDV.CONTROLLER.EVENTONFE.csproj">
+      <Project>{b3aba9d9-0b7f-4650-a861-2d2007016932}</Project>
+      <Name>PDV.CONTROLLER.EVENTONFE</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.FISCAL\PDV.CONTROLLER.FISCAL.csproj">
+      <Project>{51415768-8f4c-4d90-9418-26b874fdc05b}</Project>
+      <Name>PDV.CONTROLLER.FISCAL</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.NFCE\PDV.CONTROLLER.NFCE.csproj">
+      <Project>{f8df9e98-7110-41b6-a72f-b5d84872fc1c}</Project>
+      <Name>PDV.CONTROLLER.NFCE</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.NFE\PDV.CONTROLLER.NFE.csproj">
+      <Project>{D4701AC6-4053-484F-911E-3B84EA13A02E}</Project>
+      <Name>PDV.CONTROLLER.NFE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.DAO\PDV.DAO.csproj">
+      <Project>{397d862c-3539-4d10-ab60-4376af4f010a}</Project>
+      <Name>PDV.DAO</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.REPORTS\PDV.REPORTS.csproj">
+      <Project>{53a7565d-3528-4b14-8b71-191774147faa}</Project>
+      <Name>PDV.REPORTS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.UTIL.FORMS\PDV.UTIL.FORMS.csproj">
+      <Project>{8f63b583-b178-492b-a29d-cc395ee4537c}</Project>
+      <Name>PDV.UTIL.FORMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.UTIL\PDV.UTIL.csproj">
+      <Project>{d0aa02cb-a9d4-47b0-9e06-f96760d03d96}</Project>
+      <Name>PDV.UTIL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.VIEW\ERP.csproj">
+      <Project>{5c9c61fb-e97d-4b25-a478-70dd088f1219}</Project>
+      <Name>ERP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesa ocupdaNew.png" />
+    <None Include="Resources\mesa livreNew.png" />
+    <None Include="Resources\Asset 1%402x.png" />
+    <None Include="Resources\FORTEPLUS_2018.jpg" />
+    <None Include="Resources\load_chat.gif" />
+    <None Include="Resources\Fundo 12.png" />
+    <None Include="Resources\Fundo 13.png" />
+    <None Include="Resources\Fundo 2.png" />
+    <None Include="Resources\Logo sem efeito Png.png" />
+    <None Include="Resources\LOGO 296X130.png" />
+    <None Include="Resources\Logo Pequeno.png" />
+    <None Include="Resources\engrenages.png" />
+    <None Include="Resources\Logo Pequeno azul escuro.png" />
+    <None Include="Resources\engrenagens2.png" />
+    <None Include="Resources\Chave.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\back1.png" />
+    <None Include="Resources\back2.png" />
+    <None Include="Resources\back3.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\key1.png" />
+    <None Include="Resources\key3.png" />
+    <None Include="Resources\config_login.png" />
+    <None Include="Resources\fcaixa.png" />
+    <None Include="Resources\bgFrenteCaixa.png" />
+    <None Include="Resources\gridproduto.png" />
+    <None Include="Resources\fundodgpagamento.png" />
+    <Content Include="Resources\logo.png" />
+    <None Include="Resources\logoeb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

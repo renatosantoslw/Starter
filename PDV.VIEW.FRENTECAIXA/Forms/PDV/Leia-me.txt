@@ -1,0 +1,1 @@
+Caso a sua opção de comunicação com o MFE TM-1000 seja através de DLL, a mesma deverá ser alocada no mesmo diretório de Aplicativo Comercial.

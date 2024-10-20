@@ -1,0 +1,2930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C9C61FB-E97D-4B25-A478-70DD088F1219}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDV.VIEW</RootNamespace>
+    <AssemblyName>Due ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\localhost\Users\WT SOFTWARE\Desktop\WebSite\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PDV.VIEW.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Boleto2Net">
+      <HintPath>..\PDV.LIB\boletonet\Boleto2Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CloudinaryDotNet, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c8234dc617ae7841, processorArchitecture=MSIL">
+      <HintPath>..\packages\CloudinaryDotNet.1.7.0\lib\net40\CloudinaryDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v19.1.Drawing, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DFe.Classes, Version=1.0.0.761, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\DFe.Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="DFe.Utils, Version=1.0.0.761, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\DFe.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="DFe.Wsdl, Version=1.0.0.761, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\DFe.Wsdl.dll</HintPath>
+    </Reference>
+    <Reference Include="DueLicence, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\license\DueLicence.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2017.4.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2017.4.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2017.4.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.Pro.5.15.3\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphicsPrinter, Version=1.0.0.767, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\GraphicsPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.BZip2">
+      <HintPath>..\PDV.LIB\IonicZlib\Ionic.BZip2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\PDV.LIB\IonicZlib\Ionic.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\PDV.LIB\IonicZlib\Ionic.Zlib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MDFe.Classes">
+      <HintPath>..\PDV.LIB\zeus\AppMDFe\MDFe.Classes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MDFe.Damdfe.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\PDV.LIB\zeus\AppMDFe\MDFe.Damdfe.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MDFe.Damdfe.Fast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PROJETOS\ROOTSYSTFS-master\PDV.LIB\zeus\AppMDFe\MDFe.Damdfe.Fast.dll</HintPath>
+      <Private>True</Private>      
+    </Reference>
+    <Reference Include="MDFe.Utils">
+      <HintPath>..\PDV.LIB\zeus\AppMDFe\MDFe.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\metro\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Classes, Version=1.0.0.761, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Danfe.Base, Version=1.0.0.761, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Danfe.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Danfe.Fast, Version=1.0.0.734, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Danfe.Fast.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Danfe.Nativo">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Danfe.Nativo.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Servicos, Version=1.0.0.761, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Servicos.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Utils, Version=1.0.0.761, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Wsdl, Version=1.0.0.767, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Wsdl.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Wsdl.XmlSerializers, Version=1.0.0.761, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Wsdl.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.1.12.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\boletonet\NReco.PdfGenerator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SysAdm">
+      <HintPath>..\PDV.LIB\sysadmin\SysAdm.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.6.0\lib\net451\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppAtualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppAtualizar.Designer.cs">
+      <DependentUpon>AppAtualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BI\BIContasAPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BI\BIContasAPagar.Designer.cs">
+      <DependentUpon>BIContasAPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BI\BIEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BI\BIEstoque.Designer.cs">
+      <DependentUpon>BIEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BI\BIFornecedoresECompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BI\BIFornecedoresECompras.Designer.cs">
+      <DependentUpon>BIFornecedoresECompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BI\BIContasAReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BI\BIContasAReceber.Designer.cs">
+      <DependentUpon>BIContasAReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BI\BIVendedoresEClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BI\BIVendedoresEClientes.Designer.cs">
+      <DependentUpon>BIVendedoresEClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\BaseProdutos\BuscarBaseProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\BaseProdutos\BuscarBaseProdutos.Designer.cs">
+      <DependentUpon>BuscarBaseProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\BaseProdutos\CadastrarProdutosPDVBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\BaseProdutos\CadastrarProdutosPDVBase.Designer.cs">
+      <DependentUpon>CadastrarProdutosPDVBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\BaseProdutos\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\BaseProdutos\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\BaseProdutos\Produtos.cs" />
+    <Compile Include="Forms\Cadastro\FCA_AliquotaICMSPorEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_AliquotaICMSPorEstado.Designer.cs">
+      <DependentUpon>FCA_AliquotaICMSPorEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_FluxoCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_FluxoCaixa.Designer.cs">
+      <DependentUpon>FCA_FluxoCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Caixa.Designer.cs">
+      <DependentUpon>FCA_Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Categoria.Designer.cs">
+      <DependentUpon>FCA_Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Comanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Comanda.Designer.cs">
+      <DependentUpon>FCA_Comanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_ContatoClienteFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_ContatoClienteFornecedor.Designer.cs">
+      <DependentUpon>FCA_ContatoClienteFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Fornecedor.Designer.cs">
+      <DependentUpon>FCA_Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_HistoricoClienteFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_HistoricoClienteFornecedor.Designer.cs">
+      <DependentUpon>FCA_HistoricoClienteFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_IntegracaoFiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_IntegracaoFiscal.Designer.cs">
+      <DependentUpon>FCA_IntegracaoFiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Portaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Portaria.Designer.cs">
+      <DependentUpon>FCA_Portaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Servico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Servico.Designer.cs">
+      <DependentUpon>FCA_Servico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_ContaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_ContaBancaria.Designer.cs">
+      <DependentUpon>FCA_ContaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_ContaCobranca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_ContaCobranca.Designer.cs">
+      <DependentUpon>FCA_ContaCobranca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_HistoricoFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_HistoricoFinanceiro.Designer.cs">
+      <DependentUpon>FCA_HistoricoFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_NaturezaFinanceira.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_NaturezaFinanceira.Designer.cs">
+      <DependentUpon>FCA_NaturezaFinanceira.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_Talonario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_Talonario.Designer.cs">
+      <DependentUpon>FCA_Talonario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_CentroDeCusto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\FCA_CentroDeCusto.Designer.cs">
+      <DependentUpon>FCA_CentroDeCusto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_BaixaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_BaixaPagamento.Designer.cs">
+      <DependentUpon>FCAFIN_BaixaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_BaixaRecebimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_BaixaRecebimento.Designer.cs">
+      <DependentUpon>FCAFIN_BaixaRecebimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ChequePagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ChequePagamento.Designer.cs">
+      <DependentUpon>FCAFIN_ChequePagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ChequeRecebimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ChequeRecebimento.Designer.cs">
+      <DependentUpon>FCAFIN_ChequeRecebimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ConciliacaoBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ConciliacaoBancaria.Designer.cs">
+      <DependentUpon>FCAFIN_ConciliacaoBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaPagarCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaPagarCadastro.Designer.cs">
+      <DependentUpon>FCAFIN_ContaPagarCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaPagarEdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaPagarEdicao.Designer.cs">
+      <DependentUpon>FCAFIN_ContaPagarEdicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaReceber.Designer.cs">
+      <DependentUpon>FCAFIN_ContaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_Debito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_Debito.Designer.cs">
+      <DependentUpon>FCAFIN_Debito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_MovimentacaoBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_MovimentacaoBancaria.Designer.cs">
+      <DependentUpon>FCAFIN_MovimentacaoBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_Credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_Credito.Designer.cs">
+      <DependentUpon>FCAFIN_Credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_TransferenciaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_TransferenciaBancaria.Designer.cs">
+      <DependentUpon>FCAFIN_TransferenciaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_TipoDeOperacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_TipoDeOperacao.Designer.cs">
+      <DependentUpon>FCA_TipoDeOperacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\InventarioAPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\InventarioAPP.Designer.cs">
+      <DependentUpon>InventarioAPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\MDFe\FCA_Condutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\MDFe\FCA_Condutor.Designer.cs">
+      <DependentUpon>FCA_Condutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\MDFe\FCA_Proprietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\MDFe\FCA_Proprietario.Designer.cs">
+      <DependentUpon>FCA_Proprietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\MDFe\FCA_Seguradora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\MDFe\FCA_Seguradora.Designer.cs">
+      <DependentUpon>FCA_Seguradora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\MDFe\FCA_Veiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\MDFe\FCA_Veiculo.Designer.cs">
+      <DependentUpon>FCA_Veiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Parametros\FCA_MotivoCancelamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Parametros\FCA_MotivoCancelamento.Designer.cs">
+      <DependentUpon>FCA_MotivoCancelamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Produto\FCA_Composicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Produto\FCA_Composicao.Designer.cs">
+      <DependentUpon>FCA_Composicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Suprimentos\FCA_Almoxarifado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Suprimentos\FCA_Almoxarifado.Designer.cs">
+      <DependentUpon>FCA_Almoxarifado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Suprimentos\FCA_ConversaoUM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Suprimentos\FCA_ConversaoUM.Designer.cs">
+      <DependentUpon>FCA_ConversaoUM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Suprimentos\FCA_Requisitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Suprimentos\FCA_Requisitante.Designer.cs">
+      <DependentUpon>FCA_Requisitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_Atualizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_Atualizador.Designer.cs">
+      <DependentUpon>FCONFIG_Atualizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ConsultarTabelaIBPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ConsultarTabelaIBPT.Designer.cs">
+      <DependentUpon>FCONFIG_ConsultarTabelaIBPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_Contingencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_Contingencia.Designer.cs">
+      <DependentUpon>FCONFIG_Contingencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_DamfeMDFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_DamfeMDFe.Designer.cs">
+      <DependentUpon>FCONFIG_DamfeMDFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_DanfeNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_DanfeNFe.Designer.cs">
+      <DependentUpon>FCONFIG_DanfeNFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ImportarTabelaIBPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ImportarTabelaIBPT.Designer.cs">
+      <DependentUpon>FCONFIG_ImportarTabelaIBPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ImpressaoPedidoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ImpressaoPedidoVenda.Designer.cs">
+      <DependentUpon>FCONFIG_ImpressaoPedidoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_MDFeGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_MDFeGeral.Designer.cs">
+      <DependentUpon>FCONFIG_MDFeGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_NFCeGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_NFCeGeral.Designer.cs">
+      <DependentUpon>FCONFIG_NFCeGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_NFeGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_NFeGeral.Designer.cs">
+      <DependentUpon>FCONFIG_NFeGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_Vendas_Geral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_Vendas_Geral.Designer.cs">
+      <DependentUpon>FCONFIG_Vendas_Geral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\TarefasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\TarefasForm.Designer.cs">
+      <DependentUpon>TarefasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Cliente\AssociarVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Cliente\AssociarVendedor.Designer.cs">
+      <DependentUpon>AssociarVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_FluxoCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_FluxoCaixa.Designer.cs">
+      <DependentUpon>FCO_FluxoCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Caixa.Designer.cs">
+      <DependentUpon>FCO_Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Categorias.Designer.cs">
+      <DependentUpon>FCO_Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Emitente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Emitente.Designer.cs">
+      <DependentUpon>FCO_Emitente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Comanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Comanda.Designer.cs">
+      <DependentUpon>FCO_Comanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Fornecedor.Designer.cs">
+      <DependentUpon>FCO_Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_IntegracaoFiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_IntegracaoFiscal.Designer.cs">
+      <DependentUpon>FCO_IntegracaoFiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Portaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Portaria.Designer.cs">
+      <DependentUpon>FCO_Portaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_MovimentoEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_MovimentoEstoque.Designer.cs">
+      <DependentUpon>FCO_MovimentoEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Servico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Servico.Designer.cs">
+      <DependentUpon>FCO_Servico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Produto\FCO_ProdutoPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Produto\FCO_ProdutoPDV.Designer.cs">
+      <DependentUpon>FCO_ProdutoPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Produto\FCO_Produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Produto\FCO_Produto.Designer.cs">
+      <DependentUpon>FCO_Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_TipodeOperacao .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_TipodeOperacao .Designer.cs">
+      <DependentUpon>FCO_TipodeOperacao .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Veiculo .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Veiculo .Designer.cs">
+      <DependentUpon>FCO_Veiculo .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_ContaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_ContaBancaria.Designer.cs">
+      <DependentUpon>FCO_ContaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_ContaCobranca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_ContaCobranca.Designer.cs">
+      <DependentUpon>FCO_ContaCobranca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_HistoricoFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_HistoricoFinanceiro.Designer.cs">
+      <DependentUpon>FCO_HistoricoFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_NaturezaFinanceira.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_NaturezaFinanceira.Designer.cs">
+      <DependentUpon>FCO_NaturezaFinanceira.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_Talonario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_Talonario.Designer.cs">
+      <DependentUpon>FCO_Talonario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_CentroDeCusto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\FCO_CentroDeCusto.Designer.cs">
+      <DependentUpon>FCO_CentroDeCusto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_ContaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_ContaPagar.Designer.cs">
+      <DependentUpon>FCOFIN_ContaPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_ContaReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_ContaReceber.Designer.cs">
+      <DependentUpon>FCOFIN_ContaReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_MovimentacaoBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_MovimentacaoBancaria.Designer.cs">
+      <DependentUpon>FCOFIN_MovimentacaoBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\MDFe\FCO_Condutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\MDFe\FCO_Condutor.Designer.cs">
+      <DependentUpon>FCO_Condutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\MDFe\FCO_Proprietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\MDFe\FCO_Proprietario.Designer.cs">
+      <DependentUpon>FCO_Proprietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\MDFe\FCO_Seguradora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\MDFe\FCO_Seguradora.Designer.cs">
+      <DependentUpon>FCO_Seguradora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Parametros\FCO_MotivoCancelamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Parametros\FCO_MotivoCancelamento.Designer.cs">
+      <DependentUpon>FCO_MotivoCancelamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_Requisitante .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_Requisitante .Designer.cs">
+      <DependentUpon>FCO_Requisitante .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_SaldoEstoqueInicial .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_SaldoEstoqueInicial .Designer.cs">
+      <DependentUpon>FCO_SaldoEstoqueInicial .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_ConversaoUM .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_ConversaoUM .Designer.cs">
+      <DependentUpon>FCO_ConversaoUM .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_Almoxarifado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_Almoxarifado.Designer.cs">
+      <DependentUpon>FCO_Almoxarifado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\Gerenciamento\FEST_GerenciarNFeEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\Gerenciamento\FEST_GerenciarNFeEntrada.Designer.cs">
+      <DependentUpon>FEST_GerenciarNFeEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_EscolhaFormatoImportacaoNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_EscolhaFormatoImportacaoNFe.Designer.cs">
+      <DependentUpon>FEST_EscolhaFormatoImportacaoNFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_IdentificacaoChave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_IdentificacaoChave.Designer.cs">
+      <DependentUpon>FEST_IdentificacaoChave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_ImportacaoNFeNOVO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_ImportacaoNFeNOVO.Designer.cs">
+      <DependentUpon>FEST_ImportacaoNFeNOVO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_ImportacaoNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_ImportacaoNFe.Designer.cs">
+      <DependentUpon>FEST_ImportacaoNFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_AltualizarPrecos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_AltualizarPrecos.Designer.cs">
+      <DependentUpon>FEST_AltualizarPrecos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_SeletorProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_SeletorProduto.Designer.cs">
+      <DependentUpon>FEST_SeletorProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\UControl\UC_ItemNFeEntradaNOVO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\UControl\UC_ItemNFeEntradaNOVO.Designer.cs">
+      <DependentUpon>UC_ItemNFeEntradaNOVO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\UControl\UC_ItemNFeEntrada.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\ImportacaoNFeEntrada\UControl\UC_ItemNFeEntrada.Designer.cs">
+      <DependentUpon>UC_ItemNFeEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\Inventario\FESTCO_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\Inventario\FESTCO_Inventario.Designer.cs">
+      <DependentUpon>FESTCO_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\Inventario\FESTCA_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\Inventario\FESTCA_Inventario.Designer.cs">
+      <DependentUpon>FESTCA_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\Inventario\FEST_SeletorProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\Inventario\FEST_SeletorProduto.Designer.cs">
+      <DependentUpon>FEST_SeletorProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_MEstoquePorProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_MEstoquePorProduto.Designer.cs">
+      <DependentUpon>GFIN_MEstoquePorProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_MEstoquePorCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_MEstoquePorCompra.Designer.cs">
+      <DependentUpon>GFIN_MEstoquePorCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_MEstoquePorVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_MEstoquePorVenda.Designer.cs">
+      <DependentUpon>GFIN_MEstoquePorVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_MovimentoEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_MovimentoEstoque.Designer.cs">
+      <DependentUpon>GFIN_MovimentoEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Financeiro\ReciboAvulsoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Financeiro\ReciboAvulsoForm.Designer.cs">
+      <DependentUpon>ReciboAvulsoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Comercial Relatorios\FiltroComercialVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Comercial Relatorios\FiltroComercialVenda.Designer.cs">
+      <DependentUpon>FiltroComercialVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Comercial Relatorios\FiltroComercialCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Comercial Relatorios\FiltroComercialCompra.Designer.cs">
+      <DependentUpon>FiltroComercialCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\DataVencimentoDAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\ImprimirDAV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\ImprimirDAV.Designer.cs">
+      <DependentUpon>ImprimirDAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\frmBiPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\frmBiPDV.designer.cs">
+      <DependentUpon>frmBiPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\SetDatetimeFormModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\SetDatetimeFormModel.Designer.cs">
+      <DependentUpon>SetDatetimeFormModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\DataVencimentoDAV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\LoginAdminDAV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\LoginAdminDAV.Designer.cs">
+      <DependentUpon>LoginAdminDAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\ItemProdutoSelecionado.cs" />
+    <Compile Include="Forms\Gerenciamento\DAC\FCA_ItemPedidoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\FCA_ItemPedidoCompra.Designer.cs">
+      <DependentUpon>FCA_ItemPedidoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\DACPesquisarFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\DACPesquisarFornecedores.Designer.cs">
+      <DependentUpon>DACPesquisarFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\DACPesquisarCompradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\DACPesquisarCompradores.Designer.cs">
+      <DependentUpon>DACPesquisarCompradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\PedidoCompraItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\PedidoCompraItem.Designer.cs">
+      <DependentUpon>PedidoCompraItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\PedidoDeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\PedidoDeCompra.Designer.cs">
+      <DependentUpon>PedidoDeCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\Transferencia\FCA_ItemTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\Transferencia\FCA_ItemTransferencia.Designer.cs">
+      <DependentUpon>FCA_ItemTransferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Estoque\Transferencia\FCA_Transferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Estoque\Transferencia\FCA_Transferencia.Designer.cs">
+      <DependentUpon>FCA_Transferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_Duplicata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_Duplicata.Designer.cs">
+      <DependentUpon>GFIN_Duplicata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_RenegociacaoTitulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Financeiro\GFIN_RenegociacaoTitulo.Designer.cs">
+      <DependentUpon>GFIN_RenegociacaoTitulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\DACPesquisarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAC\DACPesquisarProduto.Designer.cs">
+      <DependentUpon>DACPesquisarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\PedidoVendaItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\PedidoVendaItem.Designer.cs">
+      <DependentUpon>PedidoVendaItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\DAVPesquisarVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\DAVPesquisarVendedores.Designer.cs">
+      <DependentUpon>DAVPesquisarVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\DAVPesquisarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\DAVPesquisarClientes.Designer.cs">
+      <DependentUpon>DAVPesquisarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\DAVPesquisarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\DAVPesquisarProduto.Designer.cs">
+      <DependentUpon>DAVPesquisarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\GPDV_IdentificarClienteDAV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\GPDV_IdentificarClienteDAV.Designer.cs">
+      <DependentUpon>GPDV_IdentificarClienteDAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\PedidoDeVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\DAV\PedidoDeVenda.Designer.cs">
+      <DependentUpon>PedidoDeVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_FluxoFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_FluxoFinanceiro.Designer.cs">
+      <DependentUpon>GER_FluxoFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_CancelarNfce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_CancelarNfce.Designer.cs">
+      <DependentUpon>GER_CancelarNfce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_CartaCorrecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_CartaCorrecao.Designer.cs">
+      <DependentUpon>GER_CartaCorrecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_ConsultarNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_ConsultarNFe.Designer.cs">
+      <DependentUpon>GER_ConsultarNFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_EnviarMDFeEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_EnviarMDFeEmail.Designer.cs">
+      <DependentUpon>GER_EnviarMDFeEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_EnviarPorEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_EnviarPorEmail.Designer.cs">
+      <DependentUpon>GER_EnviarPorEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_EventosRegistrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_EventosRegistrados.Designer.cs">
+      <DependentUpon>GER_EventosRegistrados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_ExportarNFCe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_ExportarNFCe.Designer.cs">
+      <DependentUpon>GER_ExportarNFCe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_InutilizarNumeracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_InutilizarNumeracao.Designer.cs">
+      <DependentUpon>GER_InutilizarNumeracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_Manifesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_Manifesto.Designer.cs">
+      <DependentUpon>GER_Manifesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_NFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_NFe.Designer.cs">
+      <DependentUpon>GER_NFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_NotasFiscaisConsumidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\GER_NotasFiscaisConsumidor.Designer.cs">
+      <DependentUpon>GER_NotasFiscaisConsumidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Romaneio\GER_Romaneio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Romaneio\GER_Romaneio.Designer.cs">
+      <DependentUpon>GER_Romaneio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Romaneio\ListaPedidoFaturadoParaCarregamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Romaneio\ListaPedidoFaturadoParaCarregamento.Designer.cs">
+      <DependentUpon>ListaPedidoFaturadoParaCarregamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Tabelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\Tabelas.Designer.cs">
+      <DependentUpon>Tabelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\VendasGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gerenciamento\VendasGeral.Designer.cs">
+      <DependentUpon>VendasGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_ComandasEmAberto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_ComandasEmAberto.Designer.cs">
+      <DependentUpon>FREL_ComandasEmAberto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_FluxoDeCaixaDiarioPorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_FluxoDeCaixaDiarioPorUsuario.Designer.cs">
+      <DependentUpon>FREL_FluxoDeCaixaDiarioPorUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_ImpressaoComandas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_ImpressaoComandas.Designer.cs">
+      <DependentUpon>FREL_ImpressaoComandas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_Preview.Designer.cs">
+      <DependentUpon>FREL_Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_ProdutosPorFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Relatorios\FREL_ProdutosPorFornecedor.Designer.cs">
+      <DependentUpon>FREL_ProdutosPorFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Fornecedor.Designer.cs">
+      <DependentUpon>SEL_Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Ncm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Ncm.Designer.cs">
+      <DependentUpon>SEL_Ncm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Util\FGR_GeradorCodigoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Util\FGR_GeradorCodigoProduto.Designer.cs">
+      <DependentUpon>FGR_GeradorCodigoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Util\FormaPagamentoAux.cs" />
+    <Compile Include="Forms\Util\Grids\Grids.cs" />
+    <Compile Include="Forms\Util\Grids\GridFormats.cs" />
+    <Compile Include="Forms\Util\Pedidos.cs" />
+    <Compile Include="Forms\Util\Periodicidade.cs" />
+    <Compile Include="Forms\Util\PermissoesUtil.cs" />
+    <Compile Include="Forms\Util\SituacaoContaUtil.cs" />
+    <Compile Include="Forms\Vendas\Manifesto\ManifestoDFE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\Manifesto\ManifestoDFE.Designer.cs">
+      <DependentUpon>ManifestoDFE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\Manifesto\Seguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\Manifesto\Seguro.Designer.cs">
+      <DependentUpon>Seguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\Manifesto\SeletorNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\Manifesto\SeletorNFe.Designer.cs">
+      <DependentUpon>SeletorNFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_ItemNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_ItemNFe.Designer.cs">
+      <DependentUpon>GVEN_ItemNFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_NFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_NFe.Designer.cs">
+      <DependentUpon>GVEN_NFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorClientes.Designer.cs">
+      <DependentUpon>GVEN_SeletorClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorIntegracaoFiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorIntegracaoFiscal.Designer.cs">
+      <DependentUpon>GVEN_SeletorIntegracaoFiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorCFOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorCFOP.Designer.cs">
+      <DependentUpon>GVEN_SeletorCFOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorProduto.Designer.cs">
+      <DependentUpon>GVEN_SeletorProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorTransportadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_SeletorTransportadora.Designer.cs">
+      <DependentUpon>GVEN_SeletorTransportadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Context\Contexto.cs" />
+    <Compile Include="App_Context\PDVControlador.cs" />
+    <Compile Include="Forms\Cadastro\FCA_BandeiraCartao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_BandeiraCartao.Designer.cs">
+      <DependentUpon>FCA_BandeiraCartao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Emitente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Emitente.Designer.cs">
+      <DependentUpon>FCA_Emitente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_FormaDePagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_FormaDePagamento.Designer.cs">
+      <DependentUpon>FCA_FormaDePagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Marca.Designer.cs">
+      <DependentUpon>FCA_Marca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Municipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Municipio.Designer.cs">
+      <DependentUpon>FCA_Municipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Ncm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Ncm.Designer.cs">
+      <DependentUpon>FCA_Ncm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Pais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Pais.Designer.cs">
+      <DependentUpon>FCA_Pais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_PerfilAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_PerfilAcesso.Designer.cs">
+      <DependentUpon>FCA_PerfilAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_UnidadeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_UnidadeMedida.Designer.cs">
+      <DependentUpon>FCA_UnidadeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Usuario.Designer.cs">
+      <DependentUpon>FCA_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ConsultaStatusWS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ConsultaStatusWS.Designer.cs">
+      <DependentUpon>FCONFIG_ConsultaStatusWS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_Email.Designer.cs">
+      <DependentUpon>FCONFIG_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ImpressaoDanfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_ImpressaoDanfe.Designer.cs">
+      <DependentUpon>FCONFIG_ImpressaoDanfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_WebServicesNFCE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuracoes\FCONFIG_WebServicesNFCE.Designer.cs">
+      <DependentUpon>FCONFIG_WebServicesNFCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_BandeiraCartao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Suprimento\FCO_BandeiraCartao.Designer.cs">
+      <DependentUpon>FCO_BandeiraCartao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_FormaDePagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_FormaDePagamento.Designer.cs">
+      <DependentUpon>FCO_FormaDePagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Marca.Designer.cs">
+      <DependentUpon>FCO_Marca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Municipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Municipio.Designer.cs">
+      <DependentUpon>FCO_Municipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Ncm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Ncm.Designer.cs">
+      <DependentUpon>FCO_Ncm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_PerfilAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_PerfilAcesso.Designer.cs">
+      <DependentUpon>FCO_PerfilAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_UnidadeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_UnidadeMedida.Designer.cs">
+      <DependentUpon>FCO_UnidadeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Usuario.Designer.cs">
+      <DependentUpon>FCO_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Cfop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Cfop.Designer.cs">
+      <DependentUpon>FCA_Cfop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Cliente.Designer.cs">
+      <DependentUpon>FCA_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Produto\FCA_Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\Produto\FCA_Produtos.Designer.cs">
+      <DependentUpon>FCA_Produtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Transportadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_Transportadora.Designer.cs">
+      <DependentUpon>FCA_Transportadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_UnidadeFederativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cadastro\FCA_UnidadeFederativa.Designer.cs">
+      <DependentUpon>FCA_UnidadeFederativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Cfop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Cfop.Designer.cs">
+      <DependentUpon>FCO_Cfop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\Cliente\FCO_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\Cliente\FCO_Cliente.Designer.cs">
+      <DependentUpon>FCO_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Pais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Pais.Designer.cs">
+      <DependentUpon>FCO_Pais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Transportadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_Transportadora.Designer.cs">
+      <DependentUpon>FCO_Transportadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_UnidadeFederativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_UnidadeFederativa.Designer.cs">
+      <DependentUpon>FCO_UnidadeFederativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_ListaDeDAVs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vendas\NFe\GVEN_ListaDeDAVs.Designer.cs">
+      <DependentUpon>GVEN_ListaDeDAVs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPDV_ProgressoNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPDV_ProgressoNFe.Designer.cs">
+      <DependentUpon>GPDV_ProgressoNFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconesFA.cs" />
+    <Compile Include="Integração Migrados\ClienteFormsAPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integração Migrados\ClienteFormsAPP.Designer.cs">
+      <DependentUpon>ClienteFormsAPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integração Migrados\Migrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integração Migrados\Migrador.Designer.cs">
+      <DependentUpon>Migrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integração Migrados\Model\Cheque.cs" />
+    <Compile Include="Integração Migrados\Model\ChequeHistorico.cs" />
+    <Compile Include="Integração Migrados\Model\Condicao.cs" />
+    <Compile Include="Integração Migrados\Model\CondicaoParcela.cs" />
+    <Compile Include="Integração Migrados\Model\Documento.cs" />
+    <Compile Include="Integração Migrados\Model\Model1.cs" />
+    <Compile Include="Integração Migrados\Model\Pessoa.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaAviso.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaCliente.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaContabilista.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaEmail.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaEndereco.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaEngenheiro.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaFuncionario.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaSocio.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaTelefone.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaTipoServicoTransporte.cs" />
+    <Compile Include="Integração Migrados\Model\PessoaVendedor.cs" />
+    <Compile Include="Integração Migrados\Model\PlanoConta.cs" />
+    <Compile Include="Integração Migrados\Model\Produto.cs" />
+    <Compile Include="Integração Migrados\Model\VWContasReceber.cs" />
+    <Compile Include="Integração Migrados\Model\v_PessoaDados.cs" />
+    <Compile Include="Integração Migrados\Model\v_Produtos.cs" />
+    <Compile Include="Integração Migrados\PedidoAPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integração Migrados\PedidoAPP.Designer.cs">
+      <DependentUpon>PedidoAPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDV\VIEW\Forms\Util\GridImprimir.cs" />
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchHelper.cs" />
+    <Compile Include="Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task\EmitirNFe.cs" />
+    <Compile Include="Task\EmitirNFeTask.cs" />
+    <Compile Include="viewXMLcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewXMLcs.Designer.cs">
+      <DependentUpon>viewXMLcs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AppAtualizar.resx">
+      <DependentUpon>AppAtualizar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BI\BIContasAPagar.resx">
+      <DependentUpon>BIContasAPagar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BI\BIEstoque.resx">
+      <DependentUpon>BIEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BI\BIFornecedoresECompras.resx">
+      <DependentUpon>BIFornecedoresECompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BI\BIContasAReceber.resx">
+      <DependentUpon>BIContasAReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BI\BIVendedoresEClientes.resx">
+      <DependentUpon>BIVendedoresEClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\BaseProdutos\BuscarBaseProdutos.resx">
+      <DependentUpon>BuscarBaseProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\BaseProdutos\CadastrarProdutosPDVBase.resx">
+      <DependentUpon>CadastrarProdutosPDVBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\BaseProdutos\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_AliquotaICMSPorEstado.resx">
+      <DependentUpon>FCA_AliquotaICMSPorEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_FluxoCaixa.resx">
+      <DependentUpon>FCA_FluxoCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Caixa.resx">
+      <DependentUpon>FCA_Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Categoria.resx">
+      <DependentUpon>FCA_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Comanda.resx">
+      <DependentUpon>FCA_Comanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_ContatoClienteFornecedor.resx">
+      <DependentUpon>FCA_ContatoClienteFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Fornecedor.resx">
+      <DependentUpon>FCA_Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_HistoricoClienteFornecedor.resx">
+      <DependentUpon>FCA_HistoricoClienteFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_IntegracaoFiscal.resx">
+      <DependentUpon>FCA_IntegracaoFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Portaria.resx">
+      <DependentUpon>FCA_Portaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Servico.resx">
+      <DependentUpon>FCA_Servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\FCA_ContaBancaria.resx">
+      <DependentUpon>FCA_ContaBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\FCA_ContaCobranca.resx">
+      <DependentUpon>FCA_ContaCobranca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\FCA_HistoricoFinanceiro.resx">
+      <DependentUpon>FCA_HistoricoFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\FCA_NaturezaFinanceira.resx">
+      <DependentUpon>FCA_NaturezaFinanceira.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\FCA_Talonario.resx">
+      <DependentUpon>FCA_Talonario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\FCA_CentroDeCusto.resx">
+      <DependentUpon>FCA_CentroDeCusto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_BaixaPagamento.resx">
+      <DependentUpon>FCAFIN_BaixaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_BaixaRecebimento.resx">
+      <DependentUpon>FCAFIN_BaixaRecebimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ChequePagamento.resx">
+      <DependentUpon>FCAFIN_ChequePagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ChequeRecebimento.resx">
+      <DependentUpon>FCAFIN_ChequeRecebimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ConciliacaoBancaria.resx">
+      <DependentUpon>FCAFIN_ConciliacaoBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaPagarCadastro.resx">
+      <DependentUpon>FCAFIN_ContaPagarCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaPagarEdicao.resx">
+      <DependentUpon>FCAFIN_ContaPagarEdicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_ContaReceber.resx">
+      <DependentUpon>FCAFIN_ContaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_Debito.resx">
+      <DependentUpon>FCAFIN_Debito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_MovimentacaoBancaria.resx">
+      <DependentUpon>FCAFIN_MovimentacaoBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_Credito.resx">
+      <DependentUpon>FCAFIN_Credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Financeiro\Modulo\FCAFIN_TransferenciaBancaria.resx">
+      <DependentUpon>FCAFIN_TransferenciaBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_TipoDeOperacao.resx">
+      <DependentUpon>FCA_TipoDeOperacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\InventarioAPP.resx">
+      <DependentUpon>InventarioAPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\MDFe\FCA_Condutor.resx">
+      <DependentUpon>FCA_Condutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\MDFe\FCA_Proprietario.resx">
+      <DependentUpon>FCA_Proprietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\MDFe\FCA_Seguradora.resx">
+      <DependentUpon>FCA_Seguradora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\MDFe\FCA_Veiculo.resx">
+      <DependentUpon>FCA_Veiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Parametros\FCA_MotivoCancelamento.resx">
+      <DependentUpon>FCA_MotivoCancelamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Produto\FCA_Composicao.resx">
+      <DependentUpon>FCA_Composicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Suprimentos\FCA_Almoxarifado.resx">
+      <DependentUpon>FCA_Almoxarifado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Suprimentos\FCA_ConversaoUM.resx">
+      <DependentUpon>FCA_ConversaoUM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Suprimentos\FCA_Requisitante.resx">
+      <DependentUpon>FCA_Requisitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_Atualizador.resx">
+      <DependentUpon>FCONFIG_Atualizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_ConsultarTabelaIBPT.resx">
+      <DependentUpon>FCONFIG_ConsultarTabelaIBPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_Contingencia.resx">
+      <DependentUpon>FCONFIG_Contingencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_DamfeMDFe.resx">
+      <DependentUpon>FCONFIG_DamfeMDFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_DanfeNFe.resx">
+      <DependentUpon>FCONFIG_DanfeNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_ImportarTabelaIBPT.resx">
+      <DependentUpon>FCONFIG_ImportarTabelaIBPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_ImpressaoPedidoVenda.resx">
+      <DependentUpon>FCONFIG_ImpressaoPedidoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_MDFeGeral.resx">
+      <DependentUpon>FCONFIG_MDFeGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_NFCeGeral.resx">
+      <DependentUpon>FCONFIG_NFCeGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_NFeGeral.resx">
+      <DependentUpon>FCONFIG_NFeGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_Vendas_Geral.resx">
+      <DependentUpon>FCONFIG_Vendas_Geral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\TarefasForm.resx">
+      <DependentUpon>TarefasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Cliente\AssociarVendedor.resx">
+      <DependentUpon>AssociarVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_FluxoCaixa.resx">
+      <DependentUpon>FCO_FluxoCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Caixa.resx">
+      <DependentUpon>FCO_Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Categorias.resx">
+      <DependentUpon>FCO_Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Emitente.resx">
+      <DependentUpon>FCO_Emitente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Comanda.resx">
+      <DependentUpon>FCO_Comanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Fornecedor.resx">
+      <DependentUpon>FCO_Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_IntegracaoFiscal.resx">
+      <DependentUpon>FCO_IntegracaoFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Portaria.resx">
+      <DependentUpon>FCO_Portaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_MovimentoEstoque.resx">
+      <DependentUpon>FCO_MovimentoEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Servico.resx">
+      <DependentUpon>FCO_Servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Produto\FCO_ProdutoPDV.resx">
+      <DependentUpon>FCO_ProdutoPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Produto\FCO_Produto.resx">
+      <DependentUpon>FCO_Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_TipodeOperacao .resx">
+      <DependentUpon>FCO_TipodeOperacao .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Veiculo .resx">
+      <DependentUpon>FCO_Veiculo .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\FCO_ContaBancaria.resx">
+      <DependentUpon>FCO_ContaBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\FCO_ContaCobranca.resx">
+      <DependentUpon>FCO_ContaCobranca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\FCO_HistoricoFinanceiro.resx">
+      <DependentUpon>FCO_HistoricoFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\FCO_NaturezaFinanceira.resx">
+      <DependentUpon>FCO_NaturezaFinanceira.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\FCO_Talonario.resx">
+      <DependentUpon>FCO_Talonario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\FCO_CentroDeCusto.resx">
+      <DependentUpon>FCO_CentroDeCusto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_ContaPagar.resx">
+      <DependentUpon>FCOFIN_ContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_ContaReceber.resx">
+      <DependentUpon>FCOFIN_ContaReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Financeiro\Modulo\FCOFIN_MovimentacaoBancaria.resx">
+      <DependentUpon>FCOFIN_MovimentacaoBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\MDFe\FCO_Condutor.resx">
+      <DependentUpon>FCO_Condutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\MDFe\FCO_Proprietario.resx">
+      <DependentUpon>FCO_Proprietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\MDFe\FCO_Seguradora.resx">
+      <DependentUpon>FCO_Seguradora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Parametros\FCO_MotivoCancelamento.resx">
+      <DependentUpon>FCO_MotivoCancelamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Suprimento\FCO_Requisitante .resx">
+      <DependentUpon>FCO_Requisitante .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Suprimento\FCO_SaldoEstoqueInicial .resx">
+      <DependentUpon>FCO_SaldoEstoqueInicial .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Suprimento\FCO_ConversaoUM .resx">
+      <DependentUpon>FCO_ConversaoUM .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Suprimento\FCO_Almoxarifado.resx">
+      <DependentUpon>FCO_Almoxarifado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\Gerenciamento\FEST_GerenciarNFeEntrada.resx">
+      <DependentUpon>FEST_GerenciarNFeEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_EscolhaFormatoImportacaoNFe.resx">
+      <DependentUpon>FEST_EscolhaFormatoImportacaoNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_IdentificacaoChave.resx">
+      <DependentUpon>FEST_IdentificacaoChave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_ImportacaoNFeNOVO.resx">
+      <DependentUpon>FEST_ImportacaoNFeNOVO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_ImportacaoNFe.resx">
+      <DependentUpon>FEST_ImportacaoNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_AltualizarPrecos.resx">
+      <DependentUpon>FEST_AltualizarPrecos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\ImportacaoNFeEntrada\FEST_SeletorProduto.resx">
+      <DependentUpon>FEST_SeletorProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\ImportacaoNFeEntrada\UControl\UC_ItemNFeEntradaNOVO.resx">
+      <DependentUpon>UC_ItemNFeEntradaNOVO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\ImportacaoNFeEntrada\UControl\UC_ItemNFeEntrada.resx">
+      <DependentUpon>UC_ItemNFeEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\Inventario\FESTCA_Inventario.resx">
+      <DependentUpon>FESTCA_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\Inventario\FESTCO_Inventario.resx">
+      <DependentUpon>FESTCO_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\Inventario\FEST_SeletorProduto.resx">
+      <DependentUpon>FEST_SeletorProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Financeiro\GFIN_MEstoquePorProduto.resx">
+      <DependentUpon>GFIN_MEstoquePorProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Financeiro\GFIN_MEstoquePorCompra.resx">
+      <DependentUpon>GFIN_MEstoquePorCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Financeiro\GFIN_MEstoquePorVenda.resx">
+      <DependentUpon>GFIN_MEstoquePorVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Financeiro\GFIN_MovimentoEstoque.resx">
+      <DependentUpon>GFIN_MovimentoEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Financeiro\ReciboAvulsoForm.resx">
+      <DependentUpon>ReciboAvulsoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\Comercial Relatorios\FiltroComercialVenda.resx">
+      <DependentUpon>FiltroComercialVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\Comercial Relatorios\FiltroComercialCompra.resx">
+      <DependentUpon>FiltroComercialCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAC\FCA_ItemPedidoCompra.resx">
+      <DependentUpon>FCA_ItemPedidoCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAC\DACPesquisarFornecedores.resx">
+      <DependentUpon>DACPesquisarFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAC\DACPesquisarCompradores.resx">
+      <DependentUpon>DACPesquisarCompradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAC\PedidoCompraItem.resx">
+      <DependentUpon>PedidoCompraItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAC\PedidoDeCompra.resx">
+      <DependentUpon>PedidoDeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\Transferencia\FCA_ItemTransferencia.resx">
+      <DependentUpon>FCA_ItemTransferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Estoque\Transferencia\FCA_Transferencia.resx">
+      <DependentUpon>FCA_Transferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Financeiro\GFIN_Duplicata.resx">
+      <DependentUpon>GFIN_Duplicata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Financeiro\GFIN_RenegociacaoTitulo.resx">
+      <DependentUpon>GFIN_RenegociacaoTitulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAC\DACPesquisarProduto.resx">
+      <DependentUpon>DACPesquisarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\ImprimirDAV.resx">
+      <DependentUpon>ImprimirDAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\frmBiPDV.resx">
+      <DependentUpon>frmBiPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\SetDatetimeFormModel.resx">
+      <DependentUpon>SetDatetimeFormModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAV\PedidoVendaItem.resx">
+      <DependentUpon>PedidoVendaItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAV\DAVPesquisarVendedores.resx">
+      <DependentUpon>DAVPesquisarVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAV\DAVPesquisarClientes.resx">
+      <DependentUpon>DAVPesquisarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAV\DAVPesquisarProduto.resx">
+      <DependentUpon>DAVPesquisarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAV\GPDV_IdentificarClienteDAV.resx">
+      <DependentUpon>GPDV_IdentificarClienteDAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAV\LoginAdminDAV.resx">
+      <DependentUpon>LoginAdminDAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\DAV\PedidoDeVenda.resx">
+      <DependentUpon>PedidoDeVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_FluxoFinanceiro.resx">
+      <DependentUpon>GER_FluxoFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_CancelarNfce.resx">
+      <DependentUpon>GER_CancelarNfce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_CartaCorrecao.resx">
+      <DependentUpon>GER_CartaCorrecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_ConsultarNFe.resx">
+      <DependentUpon>GER_ConsultarNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_EnviarMDFeEmail.resx">
+      <DependentUpon>GER_EnviarMDFeEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_EnviarPorEmail.resx">
+      <DependentUpon>GER_EnviarPorEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_EventosRegistrados.resx">
+      <DependentUpon>GER_EventosRegistrados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_ExportarNFCe.resx">
+      <DependentUpon>GER_ExportarNFCe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_InutilizarNumeracao.resx">
+      <DependentUpon>GER_InutilizarNumeracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_Manifesto.resx">
+      <DependentUpon>GER_Manifesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_NFe.resx">
+      <DependentUpon>GER_NFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\GER_NotasFiscaisConsumidor.resx">
+      <DependentUpon>GER_NotasFiscaisConsumidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\Romaneio\GER_Romaneio.resx">
+      <DependentUpon>GER_Romaneio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\Romaneio\ListaPedidoFaturadoParaCarregamento.resx">
+      <DependentUpon>ListaPedidoFaturadoParaCarregamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\Tabelas.resx">
+      <DependentUpon>Tabelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gerenciamento\VendasGeral.resx">
+      <DependentUpon>VendasGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relatorios\FREL_ComandasEmAberto.resx">
+      <DependentUpon>FREL_ComandasEmAberto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relatorios\FREL_FluxoDeCaixaDiarioPorUsuario.resx">
+      <DependentUpon>FREL_FluxoDeCaixaDiarioPorUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relatorios\FREL_ImpressaoComandas.resx">
+      <DependentUpon>FREL_ImpressaoComandas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relatorios\FREL_Preview.resx">
+      <DependentUpon>FREL_Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relatorios\FREL_ProdutosPorFornecedor.resx">
+      <DependentUpon>FREL_ProdutosPorFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seletores\SEL_Fornecedor.resx">
+      <DependentUpon>SEL_Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seletores\SEL_Ncm.resx">
+      <DependentUpon>SEL_Ncm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Util\FGR_GeradorCodigoProduto.resx">
+      <DependentUpon>FGR_GeradorCodigoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_BandeiraCartao.resx">
+      <DependentUpon>FCA_BandeiraCartao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Emitente.resx">
+      <DependentUpon>FCA_Emitente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_FormaDePagamento.resx">
+      <DependentUpon>FCA_FormaDePagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Marca.resx">
+      <DependentUpon>FCA_Marca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Municipio.resx">
+      <DependentUpon>FCA_Municipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Ncm.resx">
+      <DependentUpon>FCA_Ncm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Pais.resx">
+      <DependentUpon>FCA_Pais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_PerfilAcesso.resx">
+      <DependentUpon>FCA_PerfilAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_UnidadeMedida.resx">
+      <DependentUpon>FCA_UnidadeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Usuario.resx">
+      <DependentUpon>FCA_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_ConsultaStatusWS.resx">
+      <DependentUpon>FCONFIG_ConsultaStatusWS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_Email.resx">
+      <DependentUpon>FCONFIG_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_ImpressaoDanfe.resx">
+      <DependentUpon>FCONFIG_ImpressaoDanfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuracoes\FCONFIG_WebServicesNFCE.resx">
+      <DependentUpon>FCONFIG_WebServicesNFCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Suprimento\FCO_BandeiraCartao.resx">
+      <DependentUpon>FCO_BandeiraCartao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_FormaDePagamento.resx">
+      <DependentUpon>FCO_FormaDePagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Marca.resx">
+      <DependentUpon>FCO_Marca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Municipio.resx">
+      <DependentUpon>FCO_Municipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Ncm.resx">
+      <DependentUpon>FCO_Ncm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_PerfilAcesso.resx">
+      <DependentUpon>FCO_PerfilAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_UnidadeMedida.resx">
+      <DependentUpon>FCO_UnidadeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Usuario.resx">
+      <DependentUpon>FCO_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\Manifesto\ManifestoDFE.resx">
+      <DependentUpon>ManifestoDFE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\Manifesto\Seguro.resx">
+      <DependentUpon>Seguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\Manifesto\SeletorNFe.resx">
+      <DependentUpon>SeletorNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\NFe\GVEN_ItemNFe.resx">
+      <DependentUpon>GVEN_ItemNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\NFe\GVEN_NFe.resx">
+      <DependentUpon>GVEN_NFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\NFe\GVEN_SeletorClientes.resx">
+      <DependentUpon>GVEN_SeletorClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\NFe\GVEN_SeletorIntegracaoFiscal.resx">
+      <DependentUpon>GVEN_SeletorIntegracaoFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\NFe\GVEN_SeletorCFOP.resx">
+      <DependentUpon>GVEN_SeletorCFOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\NFe\GVEN_SeletorProduto.resx">
+      <DependentUpon>GVEN_SeletorProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\NFe\GVEN_SeletorTransportadora.resx">
+      <DependentUpon>GVEN_SeletorTransportadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Cfop.resx">
+      <DependentUpon>FCA_Cfop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Cliente.resx">
+      <DependentUpon>FCA_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\Produto\FCA_Produtos.resx">
+      <DependentUpon>FCA_Produtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_Transportadora.resx">
+      <DependentUpon>FCA_Transportadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cadastro\FCA_UnidadeFederativa.resx">
+      <DependentUpon>FCA_UnidadeFederativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Cfop.resx">
+      <DependentUpon>FCO_Cfop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\Cliente\FCO_Cliente.resx">
+      <DependentUpon>FCO_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Pais.resx">
+      <DependentUpon>FCO_Pais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_Transportadora.resx">
+      <DependentUpon>FCO_Transportadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_UnidadeFederativa.resx">
+      <DependentUpon>FCO_UnidadeFederativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vendas\NFe\GVEN_ListaDeDAVs.resx">
+      <DependentUpon>GVEN_ListaDeDAVs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPDV_ProgressoNFe.resx">
+      <DependentUpon>GPDV_ProgressoNFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integração Migrados\ClienteFormsAPP.resx">
+      <DependentUpon>ClienteFormsAPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integração Migrados\Migrador.resx">
+      <DependentUpon>Migrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integração Migrados\PedidoAPP.resx">
+      <DependentUpon>PedidoAPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewXMLcs.resx">
+      <DependentUpon>viewXMLcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App_Data\Schemas\atuCadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cabecMsg_v1.02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\CCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\confRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\distDFeInt_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\distDFeInt_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\downloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110110_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110111_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110140_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e111500_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e111501_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e111502_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e111503_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210200_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210210_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210220_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210240_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e411500_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e411501_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e411502_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e411503_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e990900_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e990910_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envCancelPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envFiscoNfe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\enviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envRemIndus_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envSuframaInternaliza_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envSuframaVistoria_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\EPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\eventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\eventoEPEC_v0.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\eventoEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\eventoRemIndus_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\inutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\LeiauteCadastroEmissorDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsultaCadastro_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsultaCadastro_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteDownloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteRemIndus_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteSRE_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteSuframaInternaliza_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteSuframaVistoria_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\nfe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procCCeNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procConfRecebtoNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoNFe_v99.99.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procRemIndus_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\resEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\resEvento_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\resNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\resNFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retAtuCadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retconsNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDistDFeInt_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDistDFeInt_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDownloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvCancelPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvFiscoNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvRemIndus_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvSuframaInternaliza_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvSuframaVistoria_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEventoEPEC_v0.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\SuframaInternaliza_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\SuframaVistoria_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposBasico_v1.03_OPENSSL.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposBasico_v3.10_OPENSSL.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposDistDFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposDistDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Start.ini" />
+    <None Include="Forms\Gerenciamento\DAV\DAVFormaPagamento.resx.bak" />
+    <None Include="Forms\Gerenciamento\DAV\DAVPedido.resx.bak" />
+    <None Include="Forms\Gerenciamento\DAV\MainDAV.resx.bak" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseProdutos\BaseProdutos.csproj">
+      <Project>{727d546e-da1f-4652-8d4e-42fa07c402b8}</Project>
+      <Name>BaseProdutos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelAndroidAppSimples\ModelAndroidAppSimples.csproj">
+      <Project>{854d7642-c9ad-4f40-8c03-e564b0f1f865}</Project>
+      <Name>ModelAndroidAppSimples</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelAndroidApp\ModelAndroidApp.csproj">
+      <Project>{792fd9ac-9348-4e9b-9fc2-3f15e020e611}</Project>
+      <Name>ModelAndroidApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLER\PDV.CONTROLER.csproj">
+      <Project>{245d7222-45b5-4de2-bae5-17f4f031b2a2}</Project>
+      <Name>PDV.CONTROLER</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.EVENTONFE\PDV.CONTROLLER.EVENTONFE.csproj">
+      <Project>{b3aba9d9-0b7f-4650-a861-2d2007016932}</Project>
+      <Name>PDV.CONTROLLER.EVENTONFE</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.FISCAL\PDV.CONTROLLER.FISCAL.csproj">
+      <Project>{51415768-8F4C-4D90-9418-26B874FDC05B}</Project>
+      <Name>PDV.CONTROLLER.FISCAL</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.MDFE\PDV.CONTROLLER.MDFE.csproj">
+      <Project>{C0D424AB-7992-4E6A-97FC-199B11C08776}</Project>
+      <Name>PDV.CONTROLLER.MDFE</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.NFCE\PDV.CONTROLLER.NFCE.csproj">
+      <Project>{f8df9e98-7110-41b6-a72f-b5d84872fc1c}</Project>
+      <Name>PDV.CONTROLLER.NFCE</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.NFE\PDV.CONTROLLER.NFE.csproj">
+      <Project>{d4701ac6-4053-484f-911e-3b84ea13a02e}</Project>
+      <Name>PDV.CONTROLLER.NFE</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.DAO\PDV.DAO.csproj">
+      <Project>{397d862c-3539-4d10-ab60-4376af4f010a}</Project>
+      <Name>PDV.DAO</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.REPORTS\PDV.REPORTS.csproj">
+      <Project>{53a7565d-3528-4b14-8b71-191774147faa}</Project>
+      <Name>PDV.REPORTS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.UTIL.FORMS\PDV.UTIL.FORMS.csproj">
+      <Project>{8f63b583-b178-492b-a29d-cc395ee4537c}</Project>
+      <Name>PDV.UTIL.FORMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.UTIL\PDV.UTIL.csproj">
+      <Project>{d0aa02cb-a9d4-47b0-9e06-f96760d03d96}</Project>
+      <Name>PDV.UTIL</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.VIEW.BOLETO\PDV.VIEW.BOLETO.csproj">
+      <Project>{2311e055-5759-475d-a473-0d9434b13745}</Project>
+      <Name>PDV.VIEW.BOLETO</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.VIEW.SINTEGRA\PDV.VIEW.SINTEGRA.csproj">
+      <Project>{717736B2-0985-420F-B2CC-6CB4B3ED94C0}</Project>
+      <Name>PDV.VIEW.SINTEGRA</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icone.ico" />
+    <None Include="Resources\pedido de venda.png" />
+    <None Include="Resources\save_16x161.png" />
+    <None Include="Resources\ide_32x32.png" />
+    <None Include="Resources\ide_16x16.png" />
+    <None Include="Resources\save_32x321.png" />
+    <None Include="Resources\save_32x32.png" />
+    <None Include="Resources\save_16x16.png" />
+    <None Include="Resources\products_32x32.png" />
+    <None Include="Resources\products_16x16.png" />
+    <None Include="Resources\tasklist_32x32.png" />
+    <None Include="Resources\tasklist_16x16.png" />
+    <None Include="Resources\functionsfinancial_32x32.png" />
+    <None Include="Resources\functionsfinancial_16x16.png" />
+    <None Include="Resources\shoppingcart_32x32.png" />
+    <None Include="Resources\shoppingcart_16x16.png" />
+    <None Include="Resources\Faturar1.png" />
+    <None Include="Resources\load_chat.gif" />
+    <None Include="Resources\Faturar.png" />
+    <None Include="Resources\Deletar.png" />
+    <None Include="Resources\Editar.png" />
+    <None Include="Resources\Impirmir.png" />
+    <None Include="Resources\dia.PNG" />
+    <None Include="Resources\sobre.png" />
+    <None Include="Resources\background-instalador-png.png" />
+    <None Include="Resources\AtualizarCarregar.png" />
+    <None Include="Resources\Adicionar.png" />
+    <None Include="Resources\Adicionar1.png" />
+    <Content Include="Icone.ico" />
+    <Content Include="Resources\background-instalador.jpg" />
+    <None Include="Resources\icon-estoque.png" />
+    <None Include="Resources\hovericon-ajuda.png" />
+    <None Include="Resources\hovericon-cadastros.png" />
+    <None Include="Resources\hovericon-configuracoes.png" />
+    <None Include="Resources\hovericon-estoque.png" />
+    <None Include="Resources\hovericon-financeiro.png" />
+    <None Include="Resources\hovericon-fiscal.png" />
+    <None Include="Resources\hovericon-gerenciamento.png" />
+    <None Include="Resources\hovericon-relatorios.png" />
+    <None Include="Resources\icon-financeiro.png" />
+    <None Include="Resources\icon-fiscal.png" />
+    <None Include="Resources\Zeus.ico" />
+    <None Include="Resources\Zeus.png" />
+    <None Include="Resources\Zeus_PNG.png" />
+    <None Include="Resources\background-principal.png" />
+    <None Include="Resources\icon_upload.png" />
+    <None Include="Resources\icon-download.png" />
+    <None Include="Resources\Capturar.PNG" />
+    <None Include="Resources\Capturarq.PNG" />
+    <None Include="Resources\Capturar2.PNG" />
+    <None Include="Resources\Capturarw.PNG" />
+    <None Include="Resources\Baixar.png" />
+    <None Include="Resources\Capturar1.PNG" />
+    <None Include="Resources\Capturar21.PNG" />
+    <None Include="Resources\Capturarq1.PNG" />
+    <None Include="Resources\bosale_16x16.png" />
+    <None Include="Resources\bosale_32x32.png" />
+    <None Include="Resources\boorderitem_16x16.png" />
+    <None Include="Resources\boorderitem_32x32.png" />
+    <None Include="Resources\boproductgroup_16x16.png" />
+    <None Include="Resources\boproductgroup_32x32.png" />
+    <None Include="Resources\barcode2_32x32.png" />
+    <None Include="Resources\barcode_32x32.png" />
+    <None Include="Resources\cancel_32x32.png" />
+    <None Include="Resources\cancel_16x16.png" />
+    <Content Include="Resources\chag4hzw0pgvgy5ujnom.gif" />
+    <None Include="Resources\logoeb.png" />
+    <None Include="Resources\icon-ajuda.png" />
+    <None Include="Resources\icon-cadastros.png" />
+    <None Include="Resources\icon-configuracoes.png" />
+    <None Include="Resources\icon-entrar.png" />
+    <None Include="Resources\icon-gerenciamento.png" />
+    <None Include="Resources\icon-relatorios.png" />
+    <None Include="Resources\logomarca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DevExpress\" />
+    <Folder Include="Forms\Estoque\PedidoDeCompra\" />
+    <Folder Include="Forms\Gerenciamento\temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

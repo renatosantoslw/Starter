@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{245D7222-45B5-4DE2-BAE5-17F4F031B2A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDV.CONTROLER</RootNamespace>
+    <AssemblyName>PDV.CONTROLER</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CloudinaryDotNet, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c8234dc617ae7841, processorArchitecture=MSIL">
+      <HintPath>..\packages\CloudinaryDotNet.1.7.0\lib\net40\CloudinaryDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.Pro.5.15.3\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FuncoesAndroid\FuncoesCategoria.cs" />
+    <Compile Include="FuncoesAndroid\FuncoesComanda.cs" />
+    <Compile Include="FuncoesAndroid\FuncoesConfiguracao.cs" />
+    <Compile Include="FuncoesAndroid\FuncoesProduto.cs" />
+    <Compile Include="FuncoesAndroid\FuncoesUsuario.cs" />
+    <Compile Include="FuncoesFaturamento\VendaFaturamento.cs" />
+    <Compile Include="FuncoesFinanceiro\FinanceiroCliente.cs" />
+    <Compile Include="FuncoesRelatorios\FuncoesCabecalho.cs" />
+    <Compile Include="FuncoesRelatorios\FuncoesComanda.cs" />
+    <Compile Include="FuncoesRelatorios\FuncoesComandaEmAberto.cs" />
+    <Compile Include="FuncoesRelatorios\FuncoesFluxoCaixa.cs" />
+    <Compile Include="FuncoesRelatorios\FuncoesPedidoCompra.cs" />
+    <Compile Include="FuncoesRelatorios\FuncoesPedidoPorComanda.cs" />
+    <Compile Include="FuncoesRelatorios\FuncoesPedidoVendaTermica.cs" />
+    <Compile Include="FuncoesRelatorios\FuncoesProdutosPorFornecedor.cs" />
+    <Compile Include="FuncoesRetaguarda\FuncoesConfiguracao.cs" />
+    <Compile Include="FuncoesRetaguarda\FuncoesEmitente.cs" />
+    <Compile Include="FuncoesRetaguarda\FuncoesUsuario.cs" />
+    <Compile Include="Funcoes\ClsExtenso.cs" />
+    <Compile Include="Funcoes\FuncaoBackup.cs" />
+    <Compile Include="Funcoes\FuncoesCaixa.cs" />
+    <Compile Include="Funcoes\FuncoesConferenciaCaixaPDV.cs" />
+    <Compile Include="Funcoes\FuncoesGlobal.cs" />
+    <Compile Include="Funcoes\FuncoesInventario.cs" />
+    <Compile Include="Funcoes\FuncoesAlmoxarifado.cs" />
+    <Compile Include="Funcoes\FuncoesAtualizador.cs" />
+    <Compile Include="Funcoes\FuncoesAverbacaoMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesBaixaPagamento.cs" />
+    <Compile Include="Funcoes\FuncoesBaixaRecebimento.cs" />
+    <Compile Include="Funcoes\FuncoesBanco.cs" />
+    <Compile Include="Funcoes\FuncoesBandeiraCartao.cs" />
+    <Compile Include="Funcoes\FuncoesCategoria.cs" />
+    <Compile Include="Funcoes\FuncoesChequesCtaPagar.cs" />
+    <Compile Include="Funcoes\FuncoesChequesCtaReceber.cs" />
+    <Compile Include="Funcoes\FuncoesComanda.cs" />
+    <Compile Include="Funcoes\FuncoesConciliacaoBancaria.cs" />
+    <Compile Include="Funcoes\FuncoesCondutor.cs" />
+    <Compile Include="Funcoes\FuncoesContaBancaria.cs" />
+    <Compile Include="Funcoes\FuncoesContaCobranca.cs" />
+    <Compile Include="Funcoes\FuncoesContaPagar.cs" />
+    <Compile Include="Funcoes\FuncoesContaRecCobranca.cs" />
+    <Compile Include="Funcoes\FuncoesContaReceber.cs" />
+    <Compile Include="Funcoes\FuncoesContratanteMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesConversaoUnidadeMedida.cs" />
+    <Compile Include="Funcoes\FuncoesCst.cs" />
+    <Compile Include="Funcoes\FuncoesDocumentoFiscalMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesDocumentoReferenciadoNFe.cs" />
+    <Compile Include="Funcoes\FuncoesDownloadNFe.cs" />
+    <Compile Include="Funcoes\FuncoesDuplicataNFe.cs" />
+    <Compile Include="Funcoes\FuncoesEventoMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesEventoNFe.cs" />
+    <Compile Include="Funcoes\FuncoesFinalidade.cs" />
+    <Compile Include="Funcoes\FuncoesFluxoCaixa.cs" />
+    <Compile Include="Funcoes\FuncoesCFOP.cs" />
+    <Compile Include="Funcoes\FuncoesCliente.cs" />
+    <Compile Include="Funcoes\FuncoesConfiguracao.cs" />
+    <Compile Include="Funcoes\FuncoesContato.cs" />
+    <Compile Include="Funcoes\FuncoesEmitente.cs" />
+    <Compile Include="Funcoes\FuncoesEndereco.cs" />
+    <Compile Include="Funcoes\FuncoesFormaDePagamento.cs" />
+    <Compile Include="Funcoes\FuncoesFornecedor.cs" />
+    <Compile Include="Funcoes\FuncoesContatoClienteFornecedor.cs" />
+    <Compile Include="Funcoes\FuncoesHistoricoClienteFornecedor.cs" />
+    <Compile Include="Funcoes\FuncoesHistoricoFinanceiro.cs" />
+    <Compile Include="Funcoes\FuncoesIntegracaoFiscal.cs" />
+    <Compile Include="Funcoes\FuncoesDuplicataDAC.cs" />
+    <Compile Include="Funcoes\FuncoesItemNFeEntrada.cs" />
+    <Compile Include="Funcoes\FuncoesItemPedidoCompra.cs" />
+    <Compile Include="Funcoes\FuncoesItemTransferenciaEstoque.cs" />
+    <Compile Include="Funcoes\FuncoesItemVenda.cs" />
+    <Compile Include="Funcoes\FuncoesItemDuplicataNFCe.cs" />
+    <Compile Include="Funcoes\FuncoesLacreMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesManifestacaoDestinatario.cs" />
+    <Compile Include="Funcoes\FuncoesMaquina.cs" />
+    <Compile Include="Funcoes\FuncoesMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesMotivoCancelamento.cs" />
+    <Compile Include="Funcoes\FuncoesMovimentoBancario.cs" />
+    <Compile Include="Funcoes\FuncoesMovimentoEstoque.cs" />
+    <Compile Include="Funcoes\FuncoesMovimentoFiscal.cs" />
+    <Compile Include="Funcoes\FuncoesMovimentoFiscalMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesNatureza.cs" />
+    <Compile Include="Funcoes\FuncoesNFe.cs" />
+    <Compile Include="Funcoes\FuncoesNFeEntrada.cs" />
+    <Compile Include="Funcoes\FuncoesPedidoCompra.cs" />
+    <Compile Include="Funcoes\FuncoesPercurso.cs" />
+    <Compile Include="Funcoes\FuncoesPortaria.cs" />
+    <Compile Include="Funcoes\FuncoesProdutoComposicao.cs" />
+    <Compile Include="Funcoes\FuncoesProdutoFornecedor.cs" />
+    <Compile Include="Funcoes\FuncoesProdutoNFe.cs" />
+    <Compile Include="Funcoes\FuncoesProdutoNFeCOFINS.cs" />
+    <Compile Include="Funcoes\FuncoesProdutoNFePartilhaICMS.cs" />
+    <Compile Include="Funcoes\FuncoesProdutoNFePIS.cs" />
+    <Compile Include="Funcoes\FuncoesProprietario.cs" />
+    <Compile Include="Funcoes\FuncoesRequisitante.cs" />
+    <Compile Include="Funcoes\FuncoesResponsavelSeguroCargaMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesRomaneio.cs" />
+    <Compile Include="Funcoes\FuncoesSaldoEstoqueInicial.cs" />
+    <Compile Include="Funcoes\FuncoesServico.cs" />
+    <Compile Include="Funcoes\FuncoesSuprimentocaixa .cs" />
+    <Compile Include="Funcoes\FuncoesSangriaCaixa.cs" />
+    <Compile Include="Funcoes\FuncoesMarca.cs" />
+    <Compile Include="Funcoes\FuncoesMunicipio.cs" />
+    <Compile Include="Funcoes\FuncoesNcm.cs" />
+    <Compile Include="Funcoes\FuncoesOrigemProduto.cs" />
+    <Compile Include="Funcoes\FuncoesPais.cs" />
+    <Compile Include="Funcoes\FuncoesPerfilAcesso.cs" />
+    <Compile Include="Funcoes\FuncoesProduto.cs" />
+    <Compile Include="Funcoes\FuncoesRegimeTributario.cs" />
+    <Compile Include="Funcoes\FuncoesSeguradora.cs" />
+    <Compile Include="Funcoes\FuncoesSeguradoraMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesTabela.cs" />
+    <Compile Include="Funcoes\FuncoesTalonario.cs" />
+    <Compile Include="Funcoes\FuncoesTipoAtendimento.cs" />
+    <Compile Include="Funcoes\FuncoesTipoContribuinte.cs" />
+    <Compile Include="Funcoes\FuncoesTipoDeOperacao.cs" />
+    <Compile Include="Funcoes\FuncoesCentroDeCusto.cs" />
+    <Compile Include="Funcoes\FuncoesTransferenciaEstoque.cs" />
+    <Compile Include="Funcoes\FuncoesTransportadora.cs" />
+    <Compile Include="Funcoes\FuncoesUF.cs" />
+    <Compile Include="Funcoes\FuncoesUnidadeMedida.cs" />
+    <Compile Include="Funcoes\FuncoesPagamentoMFe.cs" />
+    <Compile Include="Funcoes\FuncoesUsuario.cs" />
+    <Compile Include="Funcoes\FuncoesVeiculoMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesVeiculoTracaoMDFe.cs" />
+    <Compile Include="Funcoes\FuncoesVenda.cs" />
+    <Compile Include="Funcoes\FuncoesVolume.cs" />
+    <Compile Include="Funcoes\FuncoesProdutoNFeICMS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\AsyncTask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PDV.DAO\PDV.DAO.csproj">
+      <Project>{397d862c-3539-4d10-ab60-4376af4f010a}</Project>
+      <Name>PDV.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.INTEGRADOR.ERP\IntegradorZeusPDV\PDV.INTEGRADOR.ERP.csproj">
+      <Project>{FB411058-ED61-4AD3-A684-7C64879898A9}</Project>
+      <Name>PDV.INTEGRADOR.ERP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

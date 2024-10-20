@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{397D862C-3539-4D10-AB60-4376AF4F010A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDV.DAO</RootNamespace>
+    <AssemblyName>PDV.DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.Pro.5.15.3\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\metro\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\PDV.LIB\bd\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.0.6.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.6\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.2\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atributos\CampoTabela.cs" />
+    <Compile Include="Atributos\MaxLength.cs" />
+    <Compile Include="Custom\ChavesConfiguracao.cs" />
+    <Compile Include="Custom\Configuracoes\CFG_Atualizador.cs" />
+    <Compile Include="Custom\Configuracoes\CFG_Contingencia.cs" />
+    <Compile Include="Custom\Configuracoes\CFG_DanfeNFCe.cs" />
+    <Compile Include="Custom\Configuracoes\CFG_PDV.cs" />
+    <Compile Include="Custom\DataTableParser.cs" />
+    <Compile Include="Custom\MsgRetorno.cs" />
+    <Compile Include="Custom\VersaoModulo.cs" />
+    <Compile Include="DB\Controller\Conexao.cs" />
+    <Compile Include="DB\Controller\ConnectionFactory.cs" />
+    <Compile Include="DB\Controller\Controlador.cs" />
+    <Compile Include="DB\Controller\SQLQuery.cs" />
+    <Compile Include="DB\CriptografiaMD5\CriptografiaMD5.cs" />
+    <Compile Include="DB\CriptografiaMD5\DemoEncryption.cs" />
+    <Compile Include="DB\CriptografiaMD5\PKCSKeyGenerator.cs" />
+    <Compile Include="DB\Utils\Criptografia.cs" />
+    <Compile Include="DB\Utils\DBUtils.cs" />
+    <Compile Include="DB\Utils\IniFile.cs" />
+    <Compile Include="Custom\EntityUtil.cs" />
+    <Compile Include="DB\Utils\Sequence.cs" />
+    <Compile Include="Entidades\BandeiraCartao.cs" />
+    <Compile Include="Entidades\Caixa.cs" />
+    <Compile Include="Entidades\Categoria.cs" />
+    <Compile Include="Entidades\Cep\LocalizacaoCep.cs" />
+    <Compile Include="Entidades\Cfop.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Estoque\NFeImportacao\ItemNFePrecos.cs" />
+    <Compile Include="Entidades\Maquina.cs" />
+    <Compile Include="Entidades\ProdutoComposicao.cs" />
+    <Compile Include="Entidades\Comanda.cs" />
+    <Compile Include="Entidades\ConferenciaCaixaPDV.cs" />
+    <Compile Include="Entidades\Configuracao.cs" />
+    <Compile Include="Entidades\Contato.cs" />
+    <Compile Include="Entidades\CSTCofins.cs" />
+    <Compile Include="Entidades\CSTIcms.cs" />
+    <Compile Include="Entidades\CSTIpi.cs" />
+    <Compile Include="Entidades\CSTPis.cs" />
+    <Compile Include="Entidades\DownloadNFeEntrada\DownloadNFe.cs" />
+    <Compile Include="Entidades\DownloadNFeEntrada\ManifestacaoDestinatario.cs" />
+    <Compile Include="Entidades\Email Report Gestor\FluxoCaixaDiario.cs" />
+    <Compile Include="Entidades\Email Report Gestor\MovimentoItem.cs" />
+    <Compile Include="Entidades\Email Report Gestor\PosicaoDeEstoque.cs" />
+    <Compile Include="Entidades\Email Report Gestor\VendasResumo.cs" />
+    <Compile Include="Entidades\Email.cs" />
+    <Compile Include="Entidades\EmailEmitente.cs" />
+    <Compile Include="Entidades\Emitente.cs" />
+    <Compile Include="Entidades\Endereco.cs" />
+    <Compile Include="Entidades\Estoque\InventarioEstoque\Inventario.cs" />
+    <Compile Include="Entidades\Estoque\InventarioEstoque\ItemInventario.cs" />
+    <Compile Include="Entidades\Estoque\Movimento\MovimentoEstoque.cs" />
+    <Compile Include="Entidades\Estoque\NFeImportacao\ItemNFeEntrada.cs" />
+    <Compile Include="Entidades\Estoque\NFeImportacao\NFeEntrada.cs" />
+    <Compile Include="Entidades\Estoque\NFeImportacao\NFeEntradaXml.cs" />
+    <Compile Include="Entidades\Estoque\PedidoDeCompra\ItemPedidoCompra.cs" />
+    <Compile Include="Entidades\Estoque\PedidoDeCompra\PedidoCompra.cs" />
+    <Compile Include="Entidades\Estoque\Suprimentos\Almoxarifado.cs" />
+    <Compile Include="Entidades\Estoque\Suprimentos\ContatoClienteFornecedor.cs" />
+    <Compile Include="Entidades\Estoque\Suprimentos\ConversaoUnidadeDeMedida.cs" />
+    <Compile Include="Entidades\Estoque\Suprimentos\HistoricoClienteFornecedor.cs" />
+    <Compile Include="Entidades\Estoque\Suprimentos\MotivoCancelamento.cs" />
+    <Compile Include="Entidades\Estoque\Suprimentos\Requisitante.cs" />
+    <Compile Include="Entidades\Estoque\Suprimentos\SaldoEstoqueInicial.cs" />
+    <Compile Include="Entidades\Estoque\Transferencia\ItemTransferenciaEstoque.cs" />
+    <Compile Include="Entidades\Estoque\Transferencia\TransferenciaEstoque.cs" />
+    <Compile Include="Entidades\EventoNFe.cs" />
+    <Compile Include="Entidades\Financeiro\BaixaPagamento.cs" />
+    <Compile Include="Entidades\Financeiro\BaixaRecebimento.cs" />
+    <Compile Include="Entidades\Financeiro\Banco.cs" />
+    <Compile Include="Entidades\Financeiro\ChequeContaPagar.cs" />
+    <Compile Include="Entidades\Financeiro\ChequeContaReceber.cs" />
+    <Compile Include="Entidades\Financeiro\ContaBancaria.cs" />
+    <Compile Include="Entidades\Financeiro\ContaCobranca.cs" />
+    <Compile Include="Entidades\Financeiro\ContaPagar.cs" />
+    <Compile Include="Entidades\Financeiro\ContaReceber.cs" />
+    <Compile Include="Entidades\Financeiro\ContaRecCobranca.cs" />
+    <Compile Include="Entidades\Financeiro\HistoricoFinanceiro.cs" />
+    <Compile Include="Entidades\Financeiro\MovimentoBancario.cs" />
+    <Compile Include="Entidades\Financeiro\Natureza.cs" />
+    <Compile Include="Entidades\Financeiro\SituacaoConta.cs" />
+    <Compile Include="Entidades\Financeiro\Talonario.cs" />
+    <Compile Include="Entidades\Financeiro\TipoTitulo.cs" />
+    <Compile Include="Entidades\FormaDePagamento.cs" />
+    <Compile Include="Entidades\Fornecedor.cs" />
+    <Compile Include="Entidades\IntegracaoFiscal.cs" />
+    <Compile Include="Entidades\ItemMenu.cs" />
+    <Compile Include="Entidades\Marca.cs" />
+    <Compile Include="Entidades\MDFe\AverbacaoSeguradoraMDFe.cs" />
+    <Compile Include="Entidades\MDFe\CiotMDFe.cs" />
+    <Compile Include="Entidades\MDFe\Condutor.cs" />
+    <Compile Include="Entidades\MDFe\ContratanteMDFe.cs" />
+    <Compile Include="Entidades\MDFe\DocumentoFiscalMDFe.cs" />
+    <Compile Include="Entidades\MDFe\EventoMDFE.cs" />
+    <Compile Include="Entidades\MDFe\LacreRodoviarioMDFe.cs" />
+    <Compile Include="Entidades\MDFe\ManifestoDocumentoFiscalEletronico.cs" />
+    <Compile Include="Entidades\MDFe\MovimentoFiscalMDFe.cs" />
+    <Compile Include="Entidades\MDFe\NFeReferenciadaMDFe.cs" />
+    <Compile Include="Entidades\MDFe\PercursoMDFe.cs" />
+    <Compile Include="Entidades\MDFe\ProprietarioVeiculoMDFe.cs" />
+    <Compile Include="Entidades\MDFe\ResponsavelSeguroCargaMDFe.cs" />
+    <Compile Include="Entidades\MDFe\Seguradora.cs" />
+    <Compile Include="Entidades\MDFe\SeguradoraMDFe.cs" />
+    <Compile Include="Entidades\MDFe\Tipos\TipoCarroceria.cs" />
+    <Compile Include="Entidades\MDFe\Tipos\TipoEmitente.cs" />
+    <Compile Include="Entidades\MDFe\Tipos\TipoPropriedade.cs" />
+    <Compile Include="Entidades\MDFe\Tipos\TipoResponsavelSeguro.cs" />
+    <Compile Include="Entidades\MDFe\Tipos\TipoRodado.cs" />
+    <Compile Include="Entidades\MDFe\Tipos\TipoTransportador.cs" />
+    <Compile Include="Entidades\MDFe\Tipos\TipoTransporte.cs" />
+    <Compile Include="Entidades\MDFe\Tipos\TipoUnidadeCarga.cs" />
+    <Compile Include="Entidades\MDFe\ValePedagioMDFe.cs" />
+    <Compile Include="Entidades\MDFe\Veiculo.cs" />
+    <Compile Include="Entidades\MDFe\VeiculoTracaoMDFe.cs" />
+    <Compile Include="Entidades\Municipio.cs" />
+    <Compile Include="Entidades\Ncm.cs" />
+    <Compile Include="Entidades\MovimentoFiscal.cs" />
+    <Compile Include="Entidades\NFe\DocumentoReferenciado.cs" />
+    <Compile Include="Entidades\NFe\DuplicataNFe.cs" />
+    <Compile Include="Entidades\NFe\Finalidade.cs" />
+    <Compile Include="Entidades\NFe\DocumentoReferenciadoNFe.cs" />
+    <Compile Include="Entidades\NFe\NFe.cs" />
+    <Compile Include="Entidades\NFe\ProdutoNFe.cs" />
+    <Compile Include="Entidades\NFe\ProdutoNFeCOFINS.cs" />
+    <Compile Include="Entidades\NFe\ProdutoNFeICMS.cs" />
+    <Compile Include="Entidades\NFe\ProdutoNFePartilhaICMS.cs" />
+    <Compile Include="Entidades\NFe\ProdutoNFePIS.cs" />
+    <Compile Include="Entidades\NFe\TipoAtendimento.cs" />
+    <Compile Include="Entidades\NFe\VolumeNFe.cs" />
+    <Compile Include="Entidades\objDAV.cs" />
+    <Compile Include="Entidades\OrigemProduto.cs" />
+    <Compile Include="Entidades\Pais.cs" />
+    <Compile Include="Entidades\PDV\DuplicataDAC.cs" />
+    <Compile Include="Entidades\PDV\DuplicataNFCe.cs" />
+    <Compile Include="Entidades\PDV\FluxoCaixa.cs" />
+    <Compile Include="Entidades\PDV\ItemVenda.cs" />
+    <Compile Include="Entidades\PDV\RetiradaCaixa.cs" />
+    <Compile Include="Entidades\PDV\Venda.cs" />
+    <Compile Include="Entidades\PerfilAcesso.cs" />
+    <Compile Include="Entidades\PerfilAcessoItemMenu.cs" />
+    <Compile Include="Entidades\Portaria.cs" />
+    <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\ProdutoFornecedor.cs" />
+    <Compile Include="Entidades\Recibo.cs" />
+    <Compile Include="Entidades\RegimeTributario.cs" />
+    <Compile Include="Entidades\Romaneio.cs" />
+    <Compile Include="Entidades\RomaneioVenda.cs" />
+    <Compile Include="Entidades\SangriaCaixa.cs" />
+    <Compile Include="Entidades\Servico.cs" />
+    <Compile Include="Entidades\Tabela.cs" />
+    <Compile Include="Entidades\TipoContribuinte.cs" />
+    <Compile Include="Entidades\TipoDeOperacao.cs" />
+    <Compile Include="Entidades\Transportadora.cs" />
+    <Compile Include="Entidades\UnidadeFederativa.cs" />
+    <Compile Include="Entidades\UnidadeMedida.cs" />
+    <Compile Include="Entidades\PagamentoMFe.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Enum\ImpressaoDAV.cs" />
+    <Compile Include="Enum\ItemMenuERP.cs" />
+    <Compile Include="Enum\Modulo.cs" />
+    <Compile Include="Enum\Operacao.cs" />
+    <Compile Include="Enum\StatusDuplicata.cs" />
+    <Compile Include="Enum\StatusConta.cs" />
+    <Compile Include="Enum\StatusPedido.cs" />
+    <Compile Include="Enum\TipoBaixa.cs" />
+    <Compile Include="Enum\CalculoConversaoUM.cs" />
+    <Compile Include="Enum\TipoOperacao.cs" />
+    <Compile Include="GridViewModels\MovimentoDeEstoquePorProdutosGridViewModel.cs" />
+    <Compile Include="GridViewModels\MovimentoDeEstoquePorCompraGridViewModel.cs" />
+    <Compile Include="GridViewModels\MovimentoDeEstoquePorVendaGridViewModel.cs" />
+    <Compile Include="GridViewModels\ServicoGridViewModel.cs" />
+    <Compile Include="ModelosEspecificos\FiltrarPorModel.cs" />
+    <Compile Include="QueryModels\MovimentoDeEstoquePorProdutoQueryModel.cs" />
+    <Compile Include="QueryModels\ResumoPorProdutoGenericoReportModel.cs" />
+    <Compile Include="ModelosEspecificos\ProdutoPDV.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryModels\MovimentoDeEstoquePorCompraQueryModel.cs" />
+    <Compile Include="QueryModels\MovimentoDeEstoquePorVendaQueryModel.cs" />
+    <Compile Include="QueryModels\ResumoVendasQueryModel.cs" />
+    <Compile Include="SangriaCaixa.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

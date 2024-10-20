@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RetornaEntidade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaEntidadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RetornaEntidadeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEntidades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEntidadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEntidadesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProdutos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProdutosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getProdutosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMarcas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMarcasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMarcasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmitente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmitenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEmitenteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizaVendas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="chave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizaVendasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AtualizaVendasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormaPgto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormaPgtoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFormaPgtoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEtiquetas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEtiquetasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEtiquetasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RetornaEntidadeSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaEntidade" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEntidadeSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaEntidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEntidadesSoapIn">
+    <wsdl:part name="parameters" element="tns:getEntidades" />
+  </wsdl:message>
+  <wsdl:message name="getEntidadesSoapOut">
+    <wsdl:part name="parameters" element="tns:getEntidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProdutosSoapIn">
+    <wsdl:part name="parameters" element="tns:getProdutos" />
+  </wsdl:message>
+  <wsdl:message name="getProdutosSoapOut">
+    <wsdl:part name="parameters" element="tns:getProdutosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMarcasSoapIn">
+    <wsdl:part name="parameters" element="tns:getMarcas" />
+  </wsdl:message>
+  <wsdl:message name="getMarcasSoapOut">
+    <wsdl:part name="parameters" element="tns:getMarcasResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmitenteSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmitente" />
+  </wsdl:message>
+  <wsdl:message name="getEmitenteSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmitenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:getUsuario" />
+  </wsdl:message>
+  <wsdl:message name="getUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:getUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtualizaVendasSoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizaVendas" />
+  </wsdl:message>
+  <wsdl:message name="AtualizaVendasSoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizaVendasResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFormaPgtoSoapIn">
+    <wsdl:part name="parameters" element="tns:getFormaPgto" />
+  </wsdl:message>
+  <wsdl:message name="getFormaPgtoSoapOut">
+    <wsdl:part name="parameters" element="tns:getFormaPgtoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEtiquetasSoapIn">
+    <wsdl:part name="parameters" element="tns:getEtiquetas" />
+  </wsdl:message>
+  <wsdl:message name="getEtiquetasSoapOut">
+    <wsdl:part name="parameters" element="tns:getEtiquetasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsFinanceiroSoap">
+    <wsdl:operation name="RetornaEntidade">
+      <wsdl:input message="tns:RetornaEntidadeSoapIn" />
+      <wsdl:output message="tns:RetornaEntidadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntidades">
+      <wsdl:input message="tns:getEntidadesSoapIn" />
+      <wsdl:output message="tns:getEntidadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProdutos">
+      <wsdl:input message="tns:getProdutosSoapIn" />
+      <wsdl:output message="tns:getProdutosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMarcas">
+      <wsdl:input message="tns:getMarcasSoapIn" />
+      <wsdl:output message="tns:getMarcasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmitente">
+      <wsdl:input message="tns:getEmitenteSoapIn" />
+      <wsdl:output message="tns:getEmitenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsuario">
+      <wsdl:input message="tns:getUsuarioSoapIn" />
+      <wsdl:output message="tns:getUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaVendas">
+      <wsdl:input message="tns:AtualizaVendasSoapIn" />
+      <wsdl:output message="tns:AtualizaVendasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormaPgto">
+      <wsdl:input message="tns:getFormaPgtoSoapIn" />
+      <wsdl:output message="tns:getFormaPgtoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEtiquetas">
+      <wsdl:input message="tns:getEtiquetasSoapIn" />
+      <wsdl:output message="tns:getEtiquetasSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsFinanceiroSoap" type="tns:wsFinanceiroSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetornaEntidade">
+      <soap:operation soapAction="http://tempuri.org/RetornaEntidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntidades">
+      <soap:operation soapAction="http://tempuri.org/getEntidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProdutos">
+      <soap:operation soapAction="http://tempuri.org/getProdutos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMarcas">
+      <soap:operation soapAction="http://tempuri.org/getMarcas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmitente">
+      <soap:operation soapAction="http://tempuri.org/getEmitente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsuario">
+      <soap:operation soapAction="http://tempuri.org/getUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaVendas">
+      <soap:operation soapAction="http://tempuri.org/AtualizaVendas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormaPgto">
+      <soap:operation soapAction="http://tempuri.org/getFormaPgto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEtiquetas">
+      <soap:operation soapAction="http://tempuri.org/getEtiquetas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsFinanceiroSoap12" type="tns:wsFinanceiroSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetornaEntidade">
+      <soap12:operation soapAction="http://tempuri.org/RetornaEntidade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntidades">
+      <soap12:operation soapAction="http://tempuri.org/getEntidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProdutos">
+      <soap12:operation soapAction="http://tempuri.org/getProdutos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMarcas">
+      <soap12:operation soapAction="http://tempuri.org/getMarcas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmitente">
+      <soap12:operation soapAction="http://tempuri.org/getEmitente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsuario">
+      <soap12:operation soapAction="http://tempuri.org/getUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaVendas">
+      <soap12:operation soapAction="http://tempuri.org/AtualizaVendas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormaPgto">
+      <soap12:operation soapAction="http://tempuri.org/getFormaPgto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEtiquetas">
+      <soap12:operation soapAction="http://tempuri.org/getEtiquetas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsFinanceiro">
+    <wsdl:port name="wsFinanceiroSoap" binding="tns:wsFinanceiroSoap">
+      <soap:address location="http://web.DUE.com.br/wsFinanceiro.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsFinanceiroSoap12" binding="tns:wsFinanceiroSoap12">
+      <soap12:address location="http://web.DUE.com.br/wsFinanceiro.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

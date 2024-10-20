@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>TERMO DE LICENÇA DE USO DE SISTEMA E PRESTAÇÃO DE SERVIÇOS DE SUPORTE
+
+
+Pci Informática , com sede na Quadra 505 Sul, al 32 Lt 28 – Plano Diretor Sul – Palmas/TO, inscrita no CNPJ sob o Nº 34.901.367/0001-06, doravante denominada simplesmente CONTRATADA este termo tem por finalidade, a prestação de serviço denominada ULTILIZAÇÃO DA LICENÇA DE USO DO SISTEMA ROOT SYS ERP, mediante os termos, cláusulas e condições a seguir.
+
+CLÁUSULA PRIMEIRA -DAS DEFINIÇÔES, REQUISITOS E FUNCIONALIDADES DO SISTEMA
+
+1.1	SISTEMA ROOT SYS ERP: Sistema de automação comercial que tem por suas principais funcionalidades: Registro de vendas, controle de mesas, controle de estoque de produtos unitários, fluxo de caixa, relatórios gerenciais, encerramento e abertura de caixa, emissão de Nota Fiscal Eletrônica – NF-e, Emissão de Nota Fiscal do Consumidor Eletrônica – NFC-e, comunicação integrada com as balanças ELGIN, TOLEDO e MAGNA, integração com todas impressoras térmicas no formato CUPOM até 80CM, desde que estejam devidamente instaladas e configuradas no sistema operacional.
+
+
+1.2	COMPATIBILIDADE E REQUISITOS:  Sistema compatível com sistemas operacional Windows 32 ou 64 bits da Microsoft versões: Windows 7 Service Pack 1, Windows 8, Windows 10. Necessário processador Dual core ou superior, memória de 4GB e capacidade de armazenamento de 320 GB. Caso o computador não atenda aos requisitos de HARDWARE, a Pci Informática não se responsabilizará por eventuais problemas de mau funcionamento do SOFTWARE.
+
+CLÁUSULA SEGUNDA - DAS REGRAS RESPONSABILIDADE, SUPORTE TÉCNICO E ATENDIMENTO
+
+2.1	REGRAS DE USO E RESPONSABILIDADES: A Pci Informática não se responsabilizará pelo mau funcionamento do Computador, do seu Sistema operacional, do mau uso do computador ou de quaisquer softwares instalados e configurados posteriormente a instalação do sistema ROOT SYS ERP. Não é recomentado que sejam instalados outros SOFTWARE que não sejam o banco de dados e o sistema ROOT SYS ERP no computador. Não se responsabilizamos por antivírus e outros programas.
+
+2.2	GARANTIAS: A Pci Informática garante o perfeito funcionamento do sistema ROOT SYS ERP, mas não garante o funcionamento do Sistema Operacional. Em caso de mau funcionamento do sistema é necessário avisar com brevidade e em dia útil, caso o cliente seja cadastrado no plano PRO. A Pci Informática garante a correção de quaisquer problemas decorrente do mau funcionamento do sistema ROOT SYS ERP. O prazo da solução é negociado em COMUM acordo entre a Pci Informática e o cliente CONTRANTE. 
+
+2.3	DA INTEGRIDADE DOS DADOS SALVO: A Pci Informática não garante a integridade dos dados salvos como vendas, cadastros de produtos e demais dados. O cliente deverá adquirir um dispositivo de armazenamento e fazer uma cópia de segurança rotineiramente do sistema.
+
+2.4	DO ATENDIMENTO: O suporte técnico estará disponível de SEGUNDA-FEIRA a SEXTA-FEIRA das 08:00 às 18:00 horas para os clientes que aderiram ao PLANO PRO. SABADOS, DOMINGOS e FERIADOS apenas para o PLANO MASTER. 
+
+2.5	EXCLUSVIDADE: O sistema ROOT SYS ERP é de TOTAL propriedade da empresa Pci Informática que contém todos os seus direitos autorais e reservado. Portanto é proibido a cópia de quaisquer pastas ou arquivos do sistema. O suporte instalação e configuração do sistema é exclusivo da Pci Informática. Caso o computador seja formatado é necessário fazer o BAKUP dos dados antes e avisar com antecedência para que se faça a reinstalação do sistema;
+
+2.6	REPONSABILIDADES: É DE INTEIRA RESPONSABILIDADE DO CLIENTE a utilização do sistema NÂO FISCAL. O cliente deverá consultar um profissional contábil para verificar ou não a obrigatoriedade do sistema FISCAL. O cliente assumirá qualquer responsabilidade de infração FISCAL. 
+
+2.7	DAS INFORMAÇÔES: A Pci Informática garante o sigilo das informações do sistema. 
+
+2.8	DO CAIXA: A Pci Informática não se responsabiliza quanto as informações inseridas pelo Operador de caixa no sistema. 
+
+CLÁUSULA TERCEIRA - MODALIDADE DE PAGAMENTO, COBRANÇA E TAXAS
+
+3.1	DA COBRANÇA:  A cobrança, bloqueio e liberação do sistema é automática e realizada pela empresa ASAS Soluções financeira. O boleto é gerado 10 (DEZ) dias antes do dia PRIMEIRO de cada MÊS e é enviado via e-mail, além do e-mail são enviados ALERTAS de SMS e uma Mensagem via WhatsApp antes do vencimento do boleto. Caso o cliente não receba o boleto via EMAIL é necessário avisar com dois dias de antecedia antes do dia primeiro de cada mês.
+
+3.2	DO BLOQUEIO E LIBERAÇÂO DO SISTEMA: Caso o pagamento do boleto não seja efetuado e o BOLETO não seja compensado até o dia primeiro de cada MÊS o sistema será automaticamente bloqueado e a liberação se dá apos do pagamento da segunda via do boleto. A liberação é realizada de forma automática após a compensação do boleto bancário quando o cliente possui internet no estabelecimento, caso contrário o cliente deverá solicitar o suporte número (85) 98737-6858 a chave de ativação do sistema. Em caso de feriados e finais de semana é necessário pagar o boleto antes do dia primeiro de cada MÊS.
+
+3.3	DAS TAXAS DE SERVIÇOS. Será cobrado taxas quando: 
+
+3.3.1	Quando solicitado a SEGUNDA VIA DO BOLETO R$ 3,00 (Três Reais).
+
+3.3.2	Quando haja SOLICITAÇÃO DE VISITA TÉCNICA EM MUNICÍPIOS ACIMA DE 30km DE Distância DA SEDE 1,59 (Um real e cinquenta e nove centavos) o Km.
+	Observação: Esse valor poderá ser ajustado sem a necessidade de aviso prévio. 
+
+3.3.3	TAXA de R$ 120,00 (SETENTA E NOVE REAIS E NOVENTA CENTAVOS) a HORA quando for solicitado novas implementações, desenvolvimento de novos módulos.
+
+3.3.4           TAXA de 80,00  Visita Técnica : Quando for identificado que o problema não é no sistema e sim no equipamento cliente.
+
+3.4 VALORES DOS PLANOS MENSAIS - FEITOS NO ATO DA PROPOSTA COMERCIAL : Serão  corrigidos anualmente conforme a taxa do INPC-IBGE - Índice Nacional de Preços ao Consumidor.
+
+CLÁUSULA QUARTA - DAS ATUALIZAÇÕES DO SISTEMA E DO TERMO DE USO
+
+4.1	ATUALIZAÇÂO: Sempre que for corrigido ou criado novos módulos e melhoria do sistema, a Pci Informática avisará com brevidade e enviará um documento da VERSÃO.
+
+4.2 O TERMO DE USO: Ao Utilizar o sistema ROOT SYS ERP o cliente concorda automaticamente com todas as cláusulas, condições e termos desse CONTRATO.                                                                                                            
+                                      
+Site:  www.rootsys.com.br
+E-mail: suporte@rootsys.com.br
+Suporte: (63) 98111-1390
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABILAAASCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADvsgAA76kAAO6u
+        ACHvrwBW7q8AUO+uABn4uQAA7awAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmXAHAJhv
+        BwiZcAcpmXAHQ5lvBz6abwcXgFYIAJRqCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO+u
+        AADurAAB764ASe+vAMXvrwD3768A9O+vALfurgA5+rEAAOeuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJpw
+        CACacAgBmnAINZpwCJmacAjXmnAI6ppwCOiacAi+mnAIYZlvBxCZbwcAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAO+vAADvrwAp768A0e+vAP/vrwD/768A/++vAP/vrwC+7q4AHe6uAAAAAAAAAAAAAAAA
+        AAAAAAAAl3AIAJtwCACacAhAmnAI1ZpwCP+acAj/mnAI/5pwCP+acAj/mnAI9ppwCJGacAgRmnAIAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA768AAO+vAADvrwBs768A+e+vAP/vrwD/768A/++vAP/vrwD1768AUu+v
+        AADurgAAAAAAAAAAAACacAcAmnAIAJpwCB2acAi/mnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pw
+        CPeacAhxlm8BAZlwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA768AAO+vAADvrwB+768A/++vAP/vrwD/768A/++v
+        AP/vrwD8768AY/CwAADurgAAAAAAAAAAAACMZwgA/6gNAJpwCHKacAj7mnAI/5pwCP+acAj/mnAI/5pw
+        CP+acAj/mnAI/5pwCP+acAjJmW8HG5lvBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACZbwgAmW8IA5pwCB+acAgymm8IFI9KCACYawgAAAAAAAAAAAAAAAAA768AAO+vAADvrwBb768A8++v
+        AP/vrwD/768A/++vAP/vrwDq768AQfCwAADpqgAAAAAAAAAAAACZcAgAmnAIIJpwCMyacAj/mnAI/5pw
+        CP+acAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAjomnAIQZpvCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACacAgImnAIZ5pwCM2acAjgmnAItppvCDmecQgAmG8IAAAAAAAAAAAAAAAAAO+v
+        AADurgAV768Aqu+vAPvvrwD/768A/++vAPnvrwCW7q8ADu6vAAAAAAAAAAAAAJlwBwCYbwYDmnAIdppw
+        CPmacAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAjzmnAIU5pxCACYawYAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACacAhWmnAI55pwCP+acAj/mnAI/5pwCL6abwgcmm8IAJpw
+        BAAAAAAAAAAAAO2uAADysQAA7q8AHe+vAHvvrwCw768Are+vAHDvrwAX768AAAAAAAAAAAAAmnAIAJpw
+        CACacAg+mnAI3ZpwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAj5mnAIZpxz
+        CgCZbgcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACacAilmnAI/5pwCP+acAj/mnAI/5pw
+        CPuacAiCmnAIBppwCAAAAAAAAAAAAAAAAAAAAAAA7q8AAO2uAAPurgAP7q4ADu2vAAPtrwAAAAAAAAAA
+        AACYcAgA/3AIAJlwCDqacAjJmnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pw
+        CP+acAj/mnAIf5hrBgKZbwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACacAiVmnAI/ppw
+        CP+acAj/mnAI/5pwCP+acAjrmnAIYZZvBwWYcAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAJpwCACacAgDmnAIRZpwCNCacAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pw
+        CP+acAj/mnAI/5pwCP+acAj/mnAIoZlvBwqZbwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACacAg+mnAI2ppwCP+acAj/mnAI/5pwCP+acAj/mnAI55pwCHKacAgQmnAIAJpwCAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACZbQcAmGEGAJpvCByacAh0mnAI35pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pw
+        CP+acAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI1ppwCCGacAgAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACYbQgEmnAISppwCKGacAjHmnAI2ZpwCOyacAj9mnAI/5pwCPWacAitmnAITplw
+        CB2ZcAcLmnAIB5lwCAeacAgJmW8IEJpwBx6acAg5mm8IeZpwCMeacAj4mnAI/5pwCP+acAj/mnAI/ppw
+        CPSacAjkmnAI2ppwCNuacAjlmnAI9ppwCP+acAj/mnAI/5pwCP+acAj/mnAI+JpwCGeccgoAmG4GAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACacAgAnXIKAJhvBwaZcAgUmnAIJZpwCEiacAiJmnAI3Jpw
+        CP+acAj/mnAI85pwCMqacAipmnAInplwCKCacAimmnAIsppwCMyacAjrmnAI/ZpwCP+acAj/mnAI/5pw
+        CPuacAjVmnAIkJpwCFmacAg5mXAIKJpwCCmabwg7mnAIX5pwCKGacAjlmnAI/ppwCP+acAj/mnAI/5pw
+        CMOacAgdmnAIAJFwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJpw
+        CACacAgFmnAINZpwCK6acAj6mnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pw
+        CP+acAj+mnAI3JpwCHmacAglmW8IBq2DCACRZwgAAAAAAAAAAACXbQgAlWsIAJlvCAuacAg+mnAIrppw
+        CPmacAj/mnAI/5pwCPuacAh/mW8HBJpvBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACabwgAmXAIAJpvCBuacAigmnAI/JpwCP+acAj/mnAI/5pwCP+acAj/mnAI/5pw
+        CP+acAj/mnAI/5pwCP2acAi5mnAIO5pwCAOacAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACacAgAmW8HF5pwCI6acAj1mnAI/5pwCP+acAjomnAIVpptBAKabwYAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA668AAPCvAADvrwAO7q4AO+6vADDtrwAG7a8AAJpwCACabwgemnAIu5pwCP+acAj/mnAI/5pw
+        CP+acAj/mnAI/5pwCP+acAj/mnAI/ZpwCK2acAgimnAJAJlvBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAmW8HAJlvBw6acAiKmnAI+JpwCP+acAj/mnAI3ppwCFGYbQgCmG4IAAAA
+        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
+        AALvrgAAAAAAAAAAAAAAAAAAAAAAAJpwCACacAgBmnAIV5pwCOSacAj/mnAI/5pwCP+acAj7mnAIr5pw
+        Bx4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA768AAO+vAAHvrwAS7q8AMO+u
+        ADDurwAR7KsAAe2tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACacAgAmnAIA5pwCEuacAivmnAI3Jpw
+        CM6acAiDmnAIIJpwCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmnAEAJpw
+        AwGZbwYRmm8HJplvBx6ZcAgHmXAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////8AAP///////wAA////////
+        AAD///////8AAP///////wAA////////AAD///////8AAP///////wAA////////AAD///////8AAP/8
+        P/g//wAA//Af4A//AAD/8A/gB/8AAP/wD8AD/wAA//APwAP/AACH8A+AA/8AAAPwDwAD/wAAAfgfAAP/
+        AAAA/D4AAf8AAAB/+AAB/wAAAD/wAAH/AAAAAAAAAf8AAMAAAAAA/wAA/AAAPwB/AAD/AAD/wD8AAOGA
+        A//gHwAAwMAHwfAPAADAwA+AeAEAAMDgD4B4AQAAweAfADwAAADh8D8APAAAAP/+/wA+AAAA////AD4A
+        AAD///+AfgAAAP///4B+AAAA////wP8BAAD//////4MAAP///////wAA////////AAD///////8AAP//
+        /////wAA////////AAD///////8AAP///////wAA////////AAD///////8AAP///////wAA////////
+        AAA=
+</value>
+  </data>
+</root>
