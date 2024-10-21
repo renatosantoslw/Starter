@@ -1,6 +1,11 @@
 # Starter - ERP
 
-O **Starter** é um sistema de gestão empresarial (ERP) desenvolvido em **Windows Forms**, projetado para pequenas e médias empresas que buscam automatizar e otimizar processos internos de forma simples e eficiente.
+O **Starter** é um sistema de gestão empresarial de comercio varejista (ERP + PDV) desenvolvido em **Windows Forms**, projetado para pequenas e médias empresas que buscam automatizar e otimizar processos internos de forma simples e eficiente.
+
+## Retaguarda 
+![](https://raw.githubusercontent.com/renatosantoslw/erp-starter/refs/heads/main/TELAS/1.png)
+## PDV
+![](https://raw.githubusercontent.com/renatosantoslw/erp-starter/refs/heads/main/TELAS/2.png)
 
 ## Principais Funcionalidades:
 - **Gestão de Vendas**: Controle completo sobre o processo de vendas, desde a emissão de pedidos até o faturamento.
